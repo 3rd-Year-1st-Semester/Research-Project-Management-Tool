@@ -13,10 +13,11 @@ const MONGODB = "mongodb+srv://admin:admin@research-project-manage.l8uyu.mongodb
 
 //Space for routes import
 let student = require('./routes/students');
-
+const markingRouter = require("./routes/Markings");
 
 //Space for route configuration
 app.use('/student',student);
+app.use("/Markings",markingRouter);
 
 
 mongoose.connect(MONGODB)
