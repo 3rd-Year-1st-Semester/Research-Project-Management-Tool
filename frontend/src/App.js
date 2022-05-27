@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MarkingScheme from './components/MarkingScheme';
 
 
-const App = () => {
+export function App() {
 
   return (
 
 
-    <div className='App'>
+    <div>
 
       <Router>
 
@@ -25,4 +25,4 @@ const App = () => {
   )
 
 }
-export default App;
+
