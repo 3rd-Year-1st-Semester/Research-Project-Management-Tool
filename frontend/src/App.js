@@ -7,7 +7,7 @@ export function App() {
         <div>
             <Router>
                 <Routes>
-                    <Route path="/allStudents" element={<AllStudents />}></Route>
+                    <Route path="/allstudents" element={<AllStudents />}></Route>
                 </Routes>
             </Router>
         </div>
