@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-function AllStudents() {
+function AllUsers() {
 
-    const [student, setStudent] = useState([]);
+    const [user, setUser] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:7000/student')
+        axios.get('http://localhost:7000/user')
             .then((res) => {
-                setStudent(res.data);
+                setUser(res.data);
                 console.log(res.data);
             })
             .catch((err) => {
@@ -16,11 +16,11 @@ function AllStudents() {
             })
     }, [])
 
-    const deleteStudent = (id) => {
-        axios.delete(`http://localhost:7000/student/delete/${id}`)
+    const deleteUser = (id) => {
+        axios.delete(`http://localhost:7000/user/delete/${id}`)
             .then((res) => {
                 alert(res.data);
-                window.location = '/allstudents'
+                window.location = '/allusers'
             })
             .catch((err) => {
                 console.log(err.message);
@@ -31,35 +31,35 @@ function AllStudents() {
         <div className='container'>
 
             <center>
-                <h1>All Students</h1>
+                <h1>All Users</h1>
 
                 <table className='table table-bordered text-center'>
                     <thead>
                         <tr>
-                            <th scope='col'>Student ID</th>
+                            <th scope='col'>User ID</th>
                             <th scope='col'>Full Name</th>
                             <th scope='col'>Email</th>
                             <th scope='col'>Contact No</th>
                             <th scope='col'>Faculty</th>
-                            <th scope='col'>Academic Year</th>
-                            <th scope='col'>Semester</th>
+                            <th scope='col'>User Role</th>
+                            <th scope='col'>User Type</th>
                             <th scope='col'>Options</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            student.map((value, key) => {
+                            user.map((value, key) => {
 
                                 return (
                                     <tr>
-                                        <td>{value.student_id}</td>
+                                        <td>{value.user_id}</td>
                                         <td>{value.full_name}</td>
                                         <td>{value.email}</td>
                                         <td>{value.contact_number}</td>
                                         <td>{value.faculty}</td>
-                                        <td>{value.academic_year}</td>
-                                        <td>{value.semester}</td>
-                                        <td><button className='btn btn-success'>Update</button> <button className='btn btn-danger' onClick={() => { deleteStudent(value._id) }}>Delete</button></td>
+                                        <td>{value.user_role}</td>
+                                        <td>{value.user_type}</td>
+                                        <td><button className='btn btn-success'>Update</button> <button className='btn btn-danger' onClick={() => { deleteUser(value._id) }}>Delete</button></td>
                                     </tr>
                                 )
 
@@ -71,4 +71,4 @@ function AllStudents() {
         </div>
     );
 }
-export default AllStudents;
+export default AllUsers;
