@@ -5,6 +5,7 @@ import AllUsers from "./components/AllUsers";
 import StudentDashboard from "./components/StudentDashboard";
 import StudentLogin from "./components/StudentLogin";
 import MarkingScheme from './components/MarkingScheme';
+import ViewMarking from "./components/ViewMarking";
 
 export function App() {
     return (
@@ -16,6 +17,8 @@ export function App() {
                     <Route path="/allusers" element={<AllUsers />}></Route>
                     <Route path="/student/dashboard" element={<StudentDashboard/>}></Route>
                     <Route path="/marking" element={<MarkingScheme />} />
+                    <Route path="/markingview" element={<ViewMarking />} />
+
                 </Routes>
             </Router>
         </div>
