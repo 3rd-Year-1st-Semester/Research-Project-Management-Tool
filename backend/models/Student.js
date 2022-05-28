@@ -47,7 +47,7 @@ const studentSchema = new Schema({
 })
 
 studentSchema.methods.generateAuthToken = function () {
-    const std_token = jwt.sign({ _id: this._id,student_id:this.student_id}, process.env.JWTPRIVATEKEY, {
+    const std_token = jwt.sign({ _id: this._id}, process.env.JWTPRIVATEKEY, {
         expiresIn: "1440"
     });
     return std_token;
