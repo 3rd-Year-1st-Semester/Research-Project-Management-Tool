@@ -4,6 +4,7 @@ import AllStudents from './components/AllStudents';
 import AllUsers from "./components/AllUsers";
 import StudentDashboard from "./components/StudentDashboard";
 import StudentLogin from "./components/StudentLogin";
+import MarkingScheme from './components/MarkingScheme';
 
 export function App() {
     return (
@@ -14,6 +15,7 @@ export function App() {
                     <Route path="/allstudents" element={<AllStudents />}></Route>
                     <Route path="/allusers" element={<AllUsers />}></Route>
                     <Route path="/student/dashboard" element={<StudentDashboard/>}></Route>
+                    <Route path="/marking" element={<MarkingScheme />} />
                 </Routes>
             </Router>
         </div>
