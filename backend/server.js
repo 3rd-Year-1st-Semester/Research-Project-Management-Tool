@@ -12,15 +12,14 @@ const PORT = process.env.PORT || 7000;
 const MONGODB = "mongodb+srv://admin:admin@research-project-manage.l8uyu.mongodb.net/research_project_manage?retryWrites=true&w=majority";
 
 //Space for routes import
+let student = require('./routes/students');
+let user = require('./routes/users');
 const markingRouter = require("./routes/Markings");
 
-
-
 //Space for route configuration
+app.use('/student',student);
+app.use('/user',user);
 app.use("/Markings",markingRouter);
-
-
-
 
 mongoose.connect(MONGODB)
     .then(() => {
