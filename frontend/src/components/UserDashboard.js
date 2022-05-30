@@ -1,14 +1,14 @@
 import React from 'react';
 
-function StudentDashboard() {
+function UserDashboard() {
     return (
         <div>
             <center>
-                <h2 className='mt-3'>Student Dashboard</h2>
+                <h2 className='mt-3'>USer Dashboard</h2>
             </center>
 
         </div>
     );
 }
 
-export default StudentDashboard;
+export default UserDashboard;
