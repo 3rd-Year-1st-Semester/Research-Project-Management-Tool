@@ -21,7 +21,7 @@ criteria:{
     required:true
 },
 
-Poor_marks:{
+poor_marks:{
 
     type:String,
     required:true
