@@ -14,12 +14,13 @@ const MONGODB = "mongodb+srv://admin:admin@research-project-manage.l8uyu.mongodb
 //Space for routes import
 let student = require('./routes/students');
 let user = require('./routes/users');
-const markingRouter = require("./routes/Markings");
+
+let group = require('./routes/Groups');
 
 //Space for route configuration
 app.use('/student',student);
 app.use('/user',user);
-app.use("/Markings",markingRouter);
+app.use("/group",group);
 
 mongoose.connect(MONGODB)
     .then(() => {
@@ -32,6 +33,7 @@ mongoose.connect(MONGODB)
 
 app.get(("/"),(req,res,next)=>{
     res.send("<center><h1>📚 Research Project Upload System API</h1><h3>Developed by SE Project Group</h3></center>")
+    next();
 })
 
 app.listen(PORT, () => {
