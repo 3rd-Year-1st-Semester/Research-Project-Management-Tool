@@ -11,12 +11,14 @@ import Navbar from "./components/NavBar";
 import UserNavbar from "./components/UserNavBar";
 import MarkingScheme from './components/MarkingScheme';
 import ViewMarking from "./components/ViewMarking";
+import AllGroups from "./components/AllGroups";
+import GroupRegister from "./components/GroupRegister";
 
 export function App() {
     return (
         <div>
             {
-                localStorage.std_token ? <StudentNavbar/> : <Navbar/> 
+                localStorage.std_token ? <StudentNavbar /> : <Navbar />
             }
 
             <Router>
@@ -26,10 +28,12 @@ export function App() {
                     <Route path="/allusers" element={<AllUsers />}></Route>
 
                     <Route path="/dashboard" element={<StudentDashboard />}></Route>
-                    <Route path="/user/login" element={<UserLogin/>}></Route>
+                    <Route path="/user/login" element={<UserLogin />}></Route>
                     <Route path="/user/dashboard" element={<UserDashboard />}></Route>
+                    <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
+                    <Route path="/user/allgroups" element={<AllGroups />}></Route>
+                    <Route path="/groupregister" element={<GroupRegister />}></Route>
 
-                    <Route path="/student/dashboard" element={<StudentDashboard/>}></Route>
                     <Route path="/marking" element={<MarkingScheme />} />
                     <Route path="/markingview" element={<ViewMarking />} />
                 </Routes>
