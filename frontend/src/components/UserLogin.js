@@ -3,28 +3,28 @@ import { useState } from "react";
 import axios from 'axios';
 import '../styles/login.css';
 
-export default function StudentLogin() {
+export default function UserLogin() {
 
-    if (localStorage.std_token) {
-        window.location = "/dashboard";
+    if (localStorage.user_token) {
+        window.location = "/user/dashboard";
     }
 
-    const [student_id, setStudentID] = useState('');
+    const [user_id, setUserID] = useState('');
     const [password, setPassword] = useState('');
 
-    const studentData = {
-        student_id, password
-
+    const userData = {
+        user_id, password
     }
+    
     //insert data
-    const StudentLogin = async (e) => {
+    const UserLogin = async (e) => {
 
         e.preventDefault();
         try {
 
-            const { data: res } = await axios.post('http://localhost:7000/student/login', studentData);
-            localStorage.setItem("std_token", res.data);
-            window.location = "/dashboard"
+            const { data: res } = await axios.post('http://localhost:7000/user/login', userData);
+            localStorage.setItem("user_token", res.data);
+            window.location = "/user/dashboard"
 
         }
         catch (error) {
@@ -38,12 +38,12 @@ export default function StudentLogin() {
         <div>
             <div className='container text-center form-style'>
                 <center>
-                    <form onSubmit={StudentLogin}>
+                    <form onSubmit={UserLogin}>
                         <div className='form-group col-3'>
                             <h3 className="h3 mb-3 font-weight-normal">Login Panel</h3>
-                            <label htmlFor="inputID" className="sr-only">Student ID</label>
-                            <input type="text" id="inputID" className="form-control" placeholder="Student ID" onChange={(e) => {
-                                setStudentID(e.target.value);
+                            <label htmlFor="inputID" className="sr-only">User ID</label>
+                            <input type="text" id="inputID" className="form-control" placeholder="User ID" onChange={(e) => {
+                                setUserID(e.target.value);
                             }} />
                         </div>
                         <br />
