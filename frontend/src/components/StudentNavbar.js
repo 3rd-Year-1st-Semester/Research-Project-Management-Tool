@@ -28,7 +28,10 @@ function Navbar() {
                                 <a class="nav-link" href="/Uploads">Uploads</a>
                             </li>
                             <li class="nav-item" style={{marginRight:"30px"}}>
-                                <a class="nav-link" href="/markings">Marking Schemas</a>
+                                <a class="nav-link" href="/markingview">Marking Schemas</a>
+                            </li>
+                            <li class="nav-item" style={{marginRight:"30px"}}>
+                                <a class="nav-link" href="/groupregister">Group Register</a>
                             </li>
                             <li class="nav-item" style={{marginRight:"30px"}}>
                                 <button className='btn btn-danger' onClick={()=>{logOut()}}>Logout</button>
