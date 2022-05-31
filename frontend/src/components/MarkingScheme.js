@@ -78,7 +78,7 @@ export default function MarkingScheme() {
         , criteria8
     }
 
-    //inser data
+    //insert data
     const insertData = (e) => {
         e.preventDefault();
 
@@ -125,7 +125,7 @@ export default function MarkingScheme() {
                                     }} /> </div>
                                 </div>
                                 <div class="row justify-content-between text-left mt-5">
-                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No1))<span class="text-danger"> *</span></label> <input type="text" id="criteria" name="criteria" placeholder="" onChange={(e) => {
+                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No1)<span class="text-danger"> *</span></label> <input type="text" id="criteria" name="criteria" placeholder="" onChange={(e) => {
                                         setcriteria(e.target.value);
                                     }} /> </div>
                                     <div class="form-group col-sm-1 flex-column d-flex"> <label class="form-control-label px">PM<span class="text-danger"> *</span></label> <input type="text" id="poor_marks" name="poor_marks" placeholder="" onChange={(e) => {
@@ -146,7 +146,7 @@ export default function MarkingScheme() {
                                     }} /> </div>
                                 </div>
                                 <div class="row justify-content-between text-left mt-5">
-                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No2))<span class="text-danger"> *</span></label> <input type="text" id="criteria1" name="criteria1" placeholder="" onChange={(e) => {
+                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No2)<span class="text-danger"> *</span></label> <input type="text" id="criteria1" name="criteria1" placeholder="" onChange={(e) => {
                                         setcriteria1(e.target.value);
                                     }} /> </div>
                                     <div class="form-group col-sm-1 flex-column d-flex"> <label class="form-control-label px">PM<span class="text-danger"> *</span></label> <input type="text" id="poor_marks1" name="poor_marks1" placeholder="" onChange={(e) => {
@@ -167,7 +167,7 @@ export default function MarkingScheme() {
                                     }} /> </div>
                                 </div>
                                 <div class="row justify-content-between text-left mt-5">
-                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No3))<span class="text-danger"> *</span></label> <input type="text" id="criteria2" name="criteria2" placeholder="" onChange={(e) => {
+                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No3)<span class="text-danger"> *</span></label> <input type="text" id="criteria2" name="criteria2" placeholder="" onChange={(e) => {
                                         setcriteria2(e.target.value);
                                     }} /> </div>
                                     <div class="form-group col-sm-1 flex-column d-flex"> <label class="form-control-label px">PM<span class="text-danger"> *</span></label> <input type="text" id="poor_marks2" name="poor_marks2" placeholder="" onChange={(e) => {
@@ -188,7 +188,7 @@ export default function MarkingScheme() {
                                     }} /> </div>
                                 </div>
                                 <div class="row justify-content-between text-left mt-5">
-                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No4))<span class="text-danger"> *</span></label> <input type="text" id="criteria3" name="criteria3" placeholder="" onChange={(e) => {
+                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No4)<span class="text-danger"> *</span></label> <input type="text" id="criteria3" name="criteria3" placeholder="" onChange={(e) => {
                                         setcriteria3(e.target.value);
                                     }} /> </div>
                                     <div class="form-group col-sm-1 flex-column d-flex"> <label class="form-control-label px">PM<span class="text-danger"> *</span></label> <input type="text" id="poor_marks3" name="poor_marks3" placeholder="" onChange={(e) => {
@@ -209,7 +209,7 @@ export default function MarkingScheme() {
                                     }} /> </div>
                                 </div>
                                 <div class="row justify-content-between text-left mt-5">
-                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No5))<span class="text-danger"> *</span></label> <input type="text" id="criteria4" name="criteria4" placeholder="" onChange={(e) => {
+                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No5)<span class="text-danger"> *</span></label> <input type="text" id="criteria4" name="criteria4" placeholder="" onChange={(e) => {
                                         setcriteria4(e.target.value);
                                     }} /> </div>
                                     <div class="form-group col-sm-1 flex-column d-flex"> <label class="form-control-label px">PM<span class="text-danger"> *</span></label> <input type="text" id="poor_marks4" name="poor_marks4" placeholder="" onChange={(e) => {
@@ -230,7 +230,7 @@ export default function MarkingScheme() {
                                     }} /> </div>
                                 </div>
                                 <div class="row justify-content-between text-left mt-5">
-                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No6))<span class="text-danger"> *</span></label> <input type="text" id="criteria5" name="criteria5" placeholder="" onChange={(e) => {
+                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No6)<span class="text-danger"> *</span></label> <input type="text" id="criteria5" name="criteria5" placeholder="" onChange={(e) => {
                                         setcriteria5(e.target.value);
                                     }} /> </div>
                                     <div class="form-group col-sm-1 flex-column d-flex"> <label class="form-control-label px">PM<span class="text-danger"> *</span></label> <input type="text" id="poor_marks5" name="poor_marks5" placeholder="" onChange={(e) => {
@@ -251,7 +251,7 @@ export default function MarkingScheme() {
                                     }} /> </div>
                                 </div>
                                 <div class="row justify-content-between text-left mt-5">
-                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No7))<span class="text-danger"> *</span></label> <input type="text" id="criteria6" name="criteria6" placeholder="" onChange={(e) => {
+                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No7)<span class="text-danger"> *</span></label> <input type="text" id="criteria6" name="criteria6" placeholder="" onChange={(e) => {
                                         setcriteria6(e.target.value);
                                     }} /> </div>
                                     <div class="form-group col-sm-1 flex-column d-flex"> <label class="form-control-label px">PM<span class="text-danger"> *</span></label> <input type="text" id="poor_marks6" name="poor_marks6" placeholder="" onChange={(e) => {
@@ -272,7 +272,7 @@ export default function MarkingScheme() {
                                     }} /> </div>
                                 </div>
                                 <div class="row justify-content-between text-left mt-5">
-                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No7))<span class="text-danger"> *</span></label> <input type="text7" id="criteria7" name="criteria7" placeholder="" onChange={(e) => {
+                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (No7)<span class="text-danger"> *</span></label> <input type="text7" id="criteria7" name="criteria7" placeholder="" onChange={(e) => {
                                         setcriteria7(e.target.value);
                                     }} /> </div>
                                     <div class="form-group col-sm-1 flex-column d-flex"> <label class="form-control-label px">PM<span class="text-danger"> *</span></label> <input type="text" id="poor_marks7" name="poor_marks7" placeholder="" onChange={(e) => {
@@ -293,7 +293,7 @@ export default function MarkingScheme() {
                                     }} /> </div>
                                 </div>
                                 <div class="row justify-content-between text-left mt-5">
-                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (Other))<span class="text-danger"> *</span></label> <input type="text" id="criteria8" name="criteria8" placeholder="" onChange={(e) => {
+                                    <div class="form-group col-sm flex-column d-flex"> <label class="form-control-label px-3">Criteria (Other)<span class="text-danger"> *</span></label> <input type="text" id="criteria8" name="criteria8" placeholder="" onChange={(e) => {
                                         setcriteria8(e.target.value);
                                     }} /> </div>
 

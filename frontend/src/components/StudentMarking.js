@@ -1,9 +1,11 @@
 import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 import "../styles/view.css";
-import swal from 'sweetalert';
+import ReportGenerator from "./ReportGenerator";
+import ReportView from "./ReportGeneratorView";
 
-export default function ViewMarking() {
+
+export default function StudentMarking() {
 
     const [MarkingData, setMarkingData] = useState([]);
 
@@ -17,53 +19,16 @@ export default function ViewMarking() {
     }, [])
     
 
-const deleteMethod = (id) => {
-        axios.delete(`http://localhost:7000/Markings/delete/${id}`)
-            .then(() => {
-                swal({
-
-                    title: "Delete",
-                    text: " Marking Scheme Delete Successfully",
-                    icon: "Success",
-                    button: "OK"
-                });
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-    }
-//search part
-const [searchTerm, setSearchTerm] = useState("");
-
-
     return (
-<div>
-        <div className="col-lg-4  p-2 mt-5 ">
-                        <input type="search" placeholder="search using subject name or assignment name" name="search" className="form-control" style={{ fontSize: "20px" }}
-                            onChange={(e) => {
-                                setSearchTerm(e.target.value)
-                            }} />
-                    </div>
+
         <div>
-               
             <div class="hm-gradient">
                 <div class="container mt-4">
                     <div class="card mb-4">
                         <div class="card-body">
-                        {
-                                MarkingData.filter(val => {
-                                    if (searchTerm === "") {
-                                        return val;
-                                    }
-                                    else if (
-                                        val.subject_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                                        val.assignment_name.toLowerCase().includes(searchTerm.toLowerCase()) 
-                                        
-
-                    ) {
-                                        return val;
-                                    }
-                                }).map((val, i) => {
+                        <ReportView/>
+                            {
+                                MarkingData.map((val, i) => {
                                     return (
                                         <Fragment>
                                             <div class="row4">
@@ -79,8 +44,7 @@ const [searchTerm, setSearchTerm] = useState("");
                                             <center> <h3>{val.subject_name}</h3>
                                                 <h5>{val.assignment_name}</h5> </center>
                                             <table class="table table-striped mt-5">
-
-
+                                             
                                                 <thead>
 
                                                     <tr>
@@ -187,12 +151,12 @@ const [searchTerm, setSearchTerm] = useState("");
                                                         <td colSpan={6} >{val.criteria8}</td>
                                                     </tr>
                                                     
-                                                    
-                                                   <td> <button className="btn btn-danger bg-danger mt-5"style={{ fontSize: "20px" , width:"150px" }} onClick={() => deleteMethod(val._id)}>Delete</button></td>
-                                                   <td> <a href={`/markingupdate/${val._id}`} className="btn bg-success btn-success mt-5 " style={{ fontSize: "20px" , width:"150px" }}>Update</a></td>
+                                                   
+                                                  
                                                 </tbody>
-
+                                               
                                             </table >
+
                                         </Fragment >
 
                                     )
@@ -202,10 +166,9 @@ const [searchTerm, setSearchTerm] = useState("");
                         </div>
                     </div>
 
-
+                
                 </div>
             </div>
-</div>
 
         </div >
 
