@@ -28,6 +28,7 @@ export function App() {
                     <Route path="/allstudents" element={<AllStudents />}></Route>
                     <Route path="/allusers" element={<AllUsers />}></Route>
 
+
                     <Route path="/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/login" element={<UserLogin/>}></Route>
                     <Route path="/user/dashboard" element={<UserDashboard />}></Route>
@@ -35,11 +36,8 @@ export function App() {
                     <Route path="/student/dashboard" element={<StudentDashboard/>}></Route>
                     <Route path="/marking" element={<MarkingScheme />} />
                     <Route path="/markingview" element={<ViewMarking />} />
-<<<<<<< HEAD
                     <Route path="/markingupdate/:id" element={<UpdateMarkingScheme />} />
                     <Route path="/markingstudent" element={<StudentMarking />} />
-=======
->>>>>>> 37c6d21f539301772d64f1e2f5a9dab457503298
                 </Routes>
             </Router>
         </div>
