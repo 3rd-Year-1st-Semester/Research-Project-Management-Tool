@@ -17,6 +17,7 @@ import MarkingScheme from './components/MarkingScheme';
 import ViewMarking from "./components/ViewMarking";
 import AllGroups from "./components/AllGroups";
 import GroupRegister from "./components/GroupRegister";
+import GroupUpdate from "./components/GroupUpdate";
 
 export function App() {
     return (
@@ -27,7 +28,7 @@ export function App() {
 
             <Router>
                 <Routes>
-      
+
                     <Route path="/login" element={<StudentLogin />}></Route>
                     <Route path="/allstudents" element={<AllStudents />}></Route>
                     <Route path="/allusers" element={<AllUsers />}></Route>
@@ -37,13 +38,14 @@ export function App() {
                     <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/allgroups" element={<AllGroups />}></Route>
                     <Route path="/groupregister" element={<GroupRegister />}></Route>
-                    <Route path="/student/dashboard" element={<StudentDashboard/>}></Route>
+                    <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
+                    <Route path="/user/groupupdate/:id" element={<GroupUpdate />}></Route>
 
                     <Route path="/marking" element={<MarkingScheme />} />
                     <Route path="/markingview" element={<ViewMarking />} />
                     <Route path="/markingupdate/:id" element={<UpdateMarkingScheme />} />
                     <Route path="/markingstudent" element={<StudentMarking />} />
-                      
+
                 </Routes>
             </Router>
         </div>
