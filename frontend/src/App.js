@@ -18,6 +18,11 @@ import ViewMarking from "./components/ViewMarking";
 import AllGroups from "./components/AllGroups";
 import GroupRegister from "./components/GroupRegister";
 
+import FileUpload from './components/FileUpload';
+import FileStudentView from './components/FileStudentView';
+import StudentFileUpload from './components/StudentFileUpload';
+import FileAdminView from './components/SubmissionView';
+
 export function App() {
     return (
         <div>
@@ -27,7 +32,7 @@ export function App() {
 
             <Router>
                 <Routes>
-      
+
                     <Route path="/login" element={<StudentLogin />}></Route>
                     <Route path="/allstudents" element={<AllStudents />}></Route>
                     <Route path="/allusers" element={<AllUsers />}></Route>
@@ -37,13 +42,18 @@ export function App() {
                     <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/allgroups" element={<AllGroups />}></Route>
                     <Route path="/groupregister" element={<GroupRegister />}></Route>
-                    <Route path="/student/dashboard" element={<StudentDashboard/>}></Route>
+                    <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
 
                     <Route path="/marking" element={<MarkingScheme />} />
                     <Route path="/markingview" element={<ViewMarking />} />
                     <Route path="/markingupdate/:id" element={<UpdateMarkingScheme />} />
                     <Route path="/markingstudent" element={<StudentMarking />} />
-                      
+
+                    <Route path="/admin/upload" element={<FileUpload />} />
+                    <Route path="/students/filesdownload" element={<FileStudentView />} />
+                    <Route path="/students/submission" element={<StudentFileUpload />} />
+                    <Route path="/admin/Submitfiles" element={<FileAdminView />} />
+
                 </Routes>
             </Router>
         </div>
