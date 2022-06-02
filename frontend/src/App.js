@@ -14,6 +14,7 @@ import UserLogin from "./components/UserLogin";
 import Navbar from "./components/NavBar";
 import UserNavbar from "./components/UserNavBar";
 
+
 export function App() {
     return (
         <div>
@@ -32,7 +33,9 @@ export function App() {
                     <Route path="/user/login" element={<UserLogin/>}></Route>
                     <Route path="/user/dashboard" element={<UserDashboard />}></Route>
 
+
                     <Route path="/student/dashboard" element={<StudentDashboard/>}></Route>
+                
 
                     <Route path="/marking" element={<MarkingScheme />} />
                     <Route path="/markingview" element={<ViewMarking />} />

@@ -14,13 +14,14 @@ const MONGODB = "mongodb+srv://admin:admin@research-project-manage.l8uyu.mongodb
 //Space for routes import
 let student = require('./routes/students');
 let user = require('./routes/users');
-
+let marking = require('./routes/Markings');
 let group = require('./routes/Groups');
 
 //Space for route configuration
 app.use('/student',student);
 app.use('/user',user);
 app.use("/group",group);
+app.use("/Markings",marking);
 
 mongoose.connect(MONGODB)
     .then(() => {
