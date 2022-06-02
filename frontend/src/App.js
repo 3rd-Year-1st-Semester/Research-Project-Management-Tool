@@ -13,6 +13,7 @@ import UserDashboard from "./components/UserDashboard";
 import UserLogin from "./components/UserLogin";
 import Navbar from "./components/NavBar";
 import UserNavbar from "./components/UserNavBar";
+import Footer from "./components/Footer";
 
 
 export function App() {
@@ -41,7 +42,9 @@ export function App() {
                     <Route path="/markingview" element={<ViewMarking />} />
                     <Route path="/markingupdate/:id" element={<UpdateMarkingScheme />} />
                     <Route path="/markingstudent" element={<StudentMarking />} />
+                  
                 </Routes>
+                <Footer /> 
             </Router>
         </div>
     );
