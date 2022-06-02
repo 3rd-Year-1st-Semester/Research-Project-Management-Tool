@@ -8,7 +8,7 @@ const ReportGenerator = Marking => {
   Marking.forEach(Marking => {
 
     doc.autoTable({
-      head: [['Criteria', 'Poor marks', 'Average Mark', 'Good Mark', 'Excellent marks', 'Total Marks']],
+      head: [['Criteria', 'Poor Marks', 'Average Marks', 'Good Marks', 'Excellent Marks', 'Total Marks']],
       body: [
         [
           Marking.criteria,
@@ -88,7 +88,8 @@ const ReportGenerator = Marking => {
   const month = date.getMonth() + 1;
   const day = date.getDate();
 
-  doc.text("Marking scheme List", 14, 10);
+  doc.text("Marking Scheme ", 14, 10);
+  
   doc.save(`Marking_${year}` + " " + `${month}` + " " + `${day}` + ".pdf");
 
 }

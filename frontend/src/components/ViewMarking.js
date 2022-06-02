@@ -38,8 +38,8 @@ const [searchTerm, setSearchTerm] = useState("");
 
     return (
 <div>
-        <div className="col-lg-4  p-2 mt-5 ">
-                        <input type="search" placeholder="search using subject name or assignment name" name="search" className="form-control" style={{ fontSize: "20px" }}
+        <div className="col-lg-3 container  mt-5 ">
+                        <input type="search" placeholder="search " name="search" className="form-control" style={{ fontSize: "20px" }}
                             onChange={(e) => {
                                 setSearchTerm(e.target.value)
                             }} />

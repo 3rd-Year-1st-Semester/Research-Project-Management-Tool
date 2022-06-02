@@ -13,6 +13,8 @@ import UserDashboard from "./components/UserDashboard";
 import UserLogin from "./components/UserLogin";
 import Navbar from "./components/NavBar";
 import UserNavbar from "./components/UserNavBar";
+import Footer from "./components/Footer";
+
 import MarkingScheme from './components/MarkingScheme';
 import ViewMarking from "./components/ViewMarking";
 import AllGroups from "./components/AllGroups";
@@ -26,6 +28,7 @@ import FileUpload from './components/FileUpload';
 import FileStudentView from './components/FileStudentView';
 import StudentFileUpload from './components/StudentFileUpload';
 import FileAdminView from './components/SubmissionView';
+
 
 export function App() {
     return (
@@ -43,6 +46,9 @@ export function App() {
                     <Route path="/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/login" element={<UserLogin />}></Route>
                     <Route path="/user/dashboard" element={<UserDashboard />}></Route>
+
+                    <Route path="/student/dashboard" element={<StudentDashboard/>}></Route>
+                
                     <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/allgroups" element={<AllGroups />}></Route>
                     <Route path="/groupregister" element={<GroupRegister />}></Route>
@@ -63,6 +69,7 @@ export function App() {
                     <Route path="/admin/Submitfiles" element={<FileAdminView />} />
 
                 </Routes>
+                <Footer /> 
             </Router>
         </div>
     );
