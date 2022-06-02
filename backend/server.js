@@ -16,7 +16,6 @@ let student = require('./routes/students');
 let user = require('./routes/users');
 let marking = require('./routes/Markings');
 let group = require('./routes/Groups');
-let marking = require('./routes/Markings');
 let panelmember = require('./routes/panelmembers');
 let groupassign = require('./routes/groupassigns');
 
@@ -29,6 +28,7 @@ app.use('/panelmember',panelmember);
 app.use('/groupassign',groupassign);
 
 mongoose.connect(MONGODB)
+
     .then(() => {
         console.log("MongoDB Successfully Connected");
     })
