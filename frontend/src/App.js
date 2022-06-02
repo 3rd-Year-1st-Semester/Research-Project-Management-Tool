@@ -17,6 +17,10 @@ import MarkingScheme from './components/MarkingScheme';
 import ViewMarking from "./components/ViewMarking";
 import AllGroups from "./components/AllGroups";
 import GroupRegister from "./components/GroupRegister";
+import GroupUpdate from "./components/GroupUpdate";
+import InsertPanelMember from "./components/InsertPanelMember";
+import ViewPanelMembers from "./components/ViewPanelMembers";
+import ViewAssignPanelMembers from "./components/ViewAssignPanelMembers";
 
 import FileUpload from './components/FileUpload';
 import FileStudentView from './components/FileStudentView';
@@ -43,6 +47,10 @@ export function App() {
                     <Route path="/user/allgroups" element={<AllGroups />}></Route>
                     <Route path="/groupregister" element={<GroupRegister />}></Route>
                     <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
+                    <Route path="/user/groupupdate/:id" element={<GroupUpdate />}></Route>
+                    <Route path="/user/insertpanelmember" element={<InsertPanelMember/>} />
+                    <Route path="/user/viewpanelmembers" element={<ViewPanelMembers/>} />
+                    <Route path="/user/viewassignpanelmembers" element={<ViewAssignPanelMembers/>} />
 
                     <Route path="/marking" element={<MarkingScheme />} />
                     <Route path="/markingview" element={<ViewMarking />} />

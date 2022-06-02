@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import axios from 'axios';
 
 function AllGroups() {
@@ -17,74 +17,140 @@ function AllGroups() {
 
     }, [])
 
+
+    //Delete Groups
+    const deleteGroup = (id) => {
+
+        axios.delete(`http://localhost:7000/group/delete/${id}`)
+            .then((res) => {
+                alert(res.data);
+                window.location = "/user/allgroups"
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+
+    }
+
     return (
         <div className='container mt-5'>
             <center>
 
-            <h2>REGISTERED STUDENT GROUPS</h2>
+                <h2>REGISTERED STUDENT GROUPS</h2>
 
-            <table className='table table-striped table-bordered' style={{backgroundColor:"white"}}>
-                <thead>
-                    <th>Subject</th>
-                    <th>Group Name</th>
-                    <th>Academic Year</th>
-                    <th>Semester</th>
-                    <th>Students</th>
-                </thead>
-                <tbody>
-                    {
-                        group.map((value,key)=>{
+                {
+                    group.map((value, key) => {
 
-                            return(
+                        return (
+                                <table className='table table-striped table-bordered' style={{ backgroundColor: "white" }}>
+                                    <thead>
+                                        <th>Subject</th>
+                                        <th>Group Name</th>
+                                        <th>Academic Year</th>
+                                        <th>Semester</th>
+                                        <th>Students</th>
+                                        <th>Created Student</th>
+                                    </thead>
+                                    <tbody>
 
-                                <tr>
-                                    <td width="200px">{value.subject_name}</td>
-                                    <td width="120px">{value.group_name}</td>
-                                    <td width="150px">{value.academic_year}</td>
-                                    <td width="120px">{value.semester}</td>
-                                    <td className='table-bordered'>
-                                        <tr>
-                                            <th>Reg No</th>
-                                            <th>Name</th>
-                                            <th>Contact</th>
-                                        </tr>
-                                        <tr>
-                                            <td width="100px">{value.student_1[0]}</td>
-                                            <td width="180px">{value.student_1[1]}</td>
-                                            <td width="100px">{value.student_1[2]}</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100px">{value.student_2[0]}</td>
-                                            <td width="180px">{value.student_2[1]}</td>
-                                            <td width="100px">{value.student_2[2]}</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100px">{value.student_3[0]}</td>
-                                            <td width="180px">{value.student_3[1]}</td>
-                                            <td width="100px">{value.student_3[2]}</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100px">{value.student_4[0]}</td>
-                                            <td width="180px">{value.student_4[1]}</td>
-                                            <td width="100px">{value.student_4[2]}</td>
-                                        </tr>
-                                    </td>
-                                    <td>
-                                        <tr>
-                                            <td><button className='btn btn-success w-100 mt-4'>Update</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><button className='btn btn-danger w-100' >Delete</button></td>
-                                        </tr>
-                                    </td>
-                                </tr>
 
-                            )
+                                        <tr>
+                                            <td>{value.subject_name}</td>
+                                            <td>{value.group_name}</td>
+                                            <td>{value.academic_year}</td>
+                                            <td>{value.semester}</td>
+                                            <td>
+                                                <tr className='table-bordered'>
+                                                    <tr>
+                                                        <td>Member 01 : </td>
+                                                        <td width="180px">{value.student_1_reg}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td width="180px">{value.student_1_name}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td width="180px">{value.student_1_contact}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td width="180px">{value.student_1_email}</td>
+                                                    </tr>
+                                                </tr>
+                                                <tr className='table-bordered'>
+                                                    <tr>
+                                                        <td>Member 02 : </td>
+                                                        <td width="180px">{value.student_2_reg}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td width="180px">{value.student_2_name}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td width="180px">{value.student_2_contact}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td width="180px">{value.student_2_email}</td>
+                                                    </tr>
+                                                </tr>
+                                                <tr className='table-bordered'>
+                                                    <tr>
+                                                        <td>Member 03 : </td>
+                                                        <td width="180px">{value.student_3_reg}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td width="180px">{value.student_3_name}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td width="180px">{value.student_3_contact}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td width="180px">{value.student_3_email}</td>
+                                                    </tr>
+                                                </tr>
+                                                <tr className='table-bordered'>
+                                                    <tr>
+                                                        <td>Member 04 : </td>
+                                                        <td width="180px">{value.student_4_reg}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td width="180px">{value.student_4_name}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td width="180px">{value.student_4_contact}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td width="180px">{value.student_4_email}</td>
+                                                    </tr>
+                                                </tr>
+                                            </td>
+                                            <td width="200px">{value.created_by}</td>
+                                            <td>
+                                                <tr>
+                                                    <td><a
+                                                        href={`/user/groupupdate/${value._id}`} className='btn btn-success w-100 mt-4'>Update</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><button className='btn btn-danger w-100' onClick={() => { deleteGroup(value._id) }}>Delete</button></td>
+                                                </tr>
+                                            </td>
+                                        </tr>
 
-                        })
-                    }
-                </tbody>
-            </table>
+                                    </tbody>
+                                </table>
+                        )
+
+                    })
+                }
             </center>
         </div>
     );

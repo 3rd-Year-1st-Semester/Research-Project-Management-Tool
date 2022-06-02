@@ -19,21 +19,73 @@ const Group = new Schema({
         type: String,
         required: true
     },
-    student_1: {
-        type: Array,
+    student_1_reg: {
+        type: String,
         required: true
     },
-    student_2: {
-        type: Array,
+    student_1_name: {
+        type: String,
         required: true
     },
-    student_3: {
-        type: Array,
+    student_1_contact: {
+        type: String,
         required: true
     },
-    student_4: {
-        type: Array,
+    student_1_email: {
+        type: String,
         required: true
+    },
+    student_2_reg: {
+        type: String,
+        required: true
+    },
+    student_2_name: {
+        type: String,
+        required: true
+    },
+    student_2_contact: {
+        type: String,
+        required: true
+    },
+    student_2_email: {
+        type: String,
+        required: true
+    },
+    student_3_reg: {
+        type: String,
+        required: true
+    },
+    student_3_name: {
+        type: String,
+        required: true
+    },
+    student_3_contact: {
+        type: String,
+        required: true
+    },
+    student_3_email: {
+        type: String,
+        required: true
+    },
+    student_4_reg: {
+        type: String,
+        required: true
+    },
+    student_4_name: {
+        type: String,
+        required: true
+    },
+    student_4_contact: {
+        type: String,
+        required: true
+    },
+    student_4_email: {
+        type: String,
+        required: true
+    },
+    created_by:{
+        type:String,
+        required:true
     }
 
 })
