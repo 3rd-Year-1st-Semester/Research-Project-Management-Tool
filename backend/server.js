@@ -16,12 +16,17 @@ let student = require('./routes/students');
 let user = require('./routes/users');
 let marking = require('./routes/Markings');
 let group = require('./routes/Groups');
+let marking = require('./routes/Markings');
+let panelmember = require('./routes/panelmembers');
+let groupassign = require('./routes/groupassigns');
 
 //Space for route configuration
 app.use('/student',student);
 app.use('/user',user);
 app.use("/group",group);
 app.use("/Markings",marking);
+app.use('/panelmember',panelmember);
+app.use('/groupassign',groupassign);
 
 mongoose.connect(MONGODB)
     .then(() => {
