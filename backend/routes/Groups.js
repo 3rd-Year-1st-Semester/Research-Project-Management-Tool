@@ -8,10 +8,10 @@ router.route('/insert').post(async (req, res) => {
     Group.findOne(
         {
             $or: [
-                { student_1: group.student_1_reg },
-                { student_2: group.student_2_reg },
-                { student_3: group.student_3_reg },
-                { student_4: group.student_4_reg }
+                { student_1_reg: group.student_1_reg },
+                { student_2_reg: group.student_2_reg },
+                { student_3_reg: group.student_3_reg },
+                { student_4_reg: group.student_4_reg }
             ]
         })
         .then((data) => {
