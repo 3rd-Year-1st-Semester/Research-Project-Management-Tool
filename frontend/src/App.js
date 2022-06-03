@@ -29,8 +29,6 @@ import StudentFileUpload from './components/StudentFileUpload';
 import FileAdminView from './components/SubmissionView';
 import Footer from "./components/Footer";
 import StudentRegister from "./components/StudentRegister";
-import NotFound from "./components/NotFound";
-
 import LandingPage from "./components/LandingPage";
 
 
@@ -52,8 +50,6 @@ export function App() {
                     <Route path="/user/login" element={<UserLogin />}></Route>
 
                     <Route path="/user/dashboard" element={<UserDashboard />}></Route>
-
-                    <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
 
                     <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/allgroups" element={<AllGroups />}></Route>
