@@ -1,6 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import jwtDecode from 'jwt-decode';
+import axios from 'axios';
 
 function Navbar() {
+
+    const token = localStorage.getItem('std_token');
+    const decode = jwtDecode(token);
+
+    const [student,setStudent] = useState('');
+    console.log(student);
+    useEffect(()=>{
+
+        axios.get(`http://localhost:7000/student/${decode._id}`)
+        .then((res)=>{
+            setStudent(res.data);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+
+    },[])
 
     const logOut = () => {
         localStorage.clear();
@@ -23,16 +42,10 @@ function Navbar() {
                             <li class="nav-item" style={{ marginRight: "30px" }}>
                                 <a class="nav-link" href="/dashboard">Dashboard</a>
                             </li>
-                            <li class="nav-item" style={{ marginRight: "30px" }}>
-                                <a class="nav-link" href="/Uploads">Uploads</a>
+                            <li className='nav-item' style={{ marginLeft: "700px" }}>
+                                <a className='nav-link text-light'>Welcome {student.full_name}</a>
                             </li>
-                            <li class="nav-item" style={{ marginRight: "30px" }}>
-                                <a class="nav-link" href="/markingstudent">Marking Schemas</a>
-                            </li>
-                            <li class="nav-item" style={{ marginRight: "30px" }}>
-                                <a class="nav-link" href="/groupregister">Group Register</a>
-                            </li>
-                            <li class="nav-item" style={{ marginRight: "30px" }}>
+                            <li class="nav-item" style={{ marginLeft: "20px" }}>
                                 <button className='btn btn-danger' onClick={() => { logOut() }}>Logout</button>
                             </li>
                         </ul>

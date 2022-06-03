@@ -69,7 +69,7 @@ function ViewPanelMembers() {
 
     return (
         <div className="container">
-            <table className='table'>
+            <table>
                 <tr>
                     <td className='col-4'>
                         <center>

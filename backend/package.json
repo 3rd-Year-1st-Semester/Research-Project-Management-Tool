@@ -6,7 +6,8 @@
   "scripts": {
     "backend": "nodemon server.js",
     "frontend": "cd ../frontend && npm start",
-    "start":"concurrently \"npm run backend\" \"npm run frontend\""
+    "serverproject": "cd ../serverproject && npm start",
+    "start":"concurrently \"npm run backend\" \"npm run frontend\" \"npm run serverproject\""
   },
   "keywords": [],
   "author": "",

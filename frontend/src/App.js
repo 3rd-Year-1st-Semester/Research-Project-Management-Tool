@@ -26,6 +26,9 @@ import FileUpload from './components/FileUpload';
 import FileStudentView from './components/FileStudentView';
 import StudentFileUpload from './components/StudentFileUpload';
 import FileAdminView from './components/SubmissionView';
+import Footer from "./components/Footer";
+import StudentRegister from "./components/StudentRegister";
+import NotFound from "./components/NotFound";
 
 export function App() {
     return (
@@ -38,19 +41,20 @@ export function App() {
                 <Routes>
 
                     <Route path="/login" element={<StudentLogin />}></Route>
+                    <Route path="/register" element={<StudentRegister />}></Route>
                     <Route path="/allstudents" element={<AllStudents />}></Route>
                     <Route path="/allusers" element={<AllUsers />}></Route>
                     <Route path="/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/login" element={<UserLogin />}></Route>
-                    <Route path="/user/dashboard" element={<UserDashboard />}></Route>
+                    
                     <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/allgroups" element={<AllGroups />}></Route>
                     <Route path="/groupregister" element={<GroupRegister />}></Route>
                     <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/groupupdate/:id" element={<GroupUpdate />}></Route>
-                    <Route path="/user/insertpanelmember" element={<InsertPanelMember/>} />
-                    <Route path="/user/viewpanelmembers" element={<ViewPanelMembers/>} />
-                    <Route path="/user/viewassignpanelmembers" element={<ViewAssignPanelMembers/>} />
+                    <Route path="/user/insertpanelmember" element={<InsertPanelMember />} />
+                    <Route path="/user/viewpanelmembers" element={<ViewPanelMembers />} />
+                    <Route path="/user/viewassignpanelmembers" element={<ViewAssignPanelMembers />} />
 
                     <Route path="/marking" element={<MarkingScheme />} />
                     <Route path="/markingview" element={<ViewMarking />} />
@@ -63,6 +67,7 @@ export function App() {
                     <Route path="/admin/Submitfiles" element={<FileAdminView />} />
 
                 </Routes>
+                <Footer />
             </Router>
         </div>
     );
