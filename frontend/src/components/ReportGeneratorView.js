@@ -17,7 +17,7 @@ export default  function ReportView() {
         return (
 
             <div>
-                <div className="container mb-4 mt-4 p-3" style={{marginLeft:"1000px"}}>
+                <div className="container mb-4 mt-4 p-3" style={{marginLeft:"850px"}}>
                     <div className="row">
                         {
                             <div className="row">

@@ -9,7 +9,6 @@ app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 7000;
-const MONGODB = "mongodb+srv://admin:admin@research-project-manage.l8uyu.mongodb.net/research_project_manage?retryWrites=true&w=majority";
 
 //Space for routes import
 let student = require('./routes/students');
@@ -27,8 +26,12 @@ app.use("/Markings",marking);
 app.use('/panelmember',panelmember);
 app.use('/groupassign',groupassign);
 
-mongoose.connect(MONGODB)
+mongoose.connect(process.env.MONGODB,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true
+})
 
+mongoose.connect(MONGODB)
     .then(() => {
         console.log("MongoDB Successfully Connected");
     })

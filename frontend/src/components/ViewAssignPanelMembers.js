@@ -20,7 +20,10 @@ function ViewAssignPanelMembers() {
 
     return (
         <div className='container'>
-            <table className='table mt-5'>
+            <center>
+                <h2 className='mt-5 card'>Assigned panel members to groups</h2>
+            </center>
+            <table className='table mt-5 table-striped bg-light' style={{ marginTop: '100px', marginBottom: '200px' }}>
                 <thead>
                     <tr>
                         <th>Panel Member Name</th>
