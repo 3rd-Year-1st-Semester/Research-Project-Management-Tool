@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 import "../styles/view.css";
-import ReportGenerator from "./ReportGenerator";
+
 import ReportView from "./ReportGeneratorView";
 
 
@@ -23,8 +23,8 @@ export default function StudentMarking() {
 
         <div>
             <div class="hm-gradient">
-                <div class="container mt-4">
-                    <div class="card mb-4">
+                <div class="container ">
+                    <div class="card ">
                         <div class="card-body">
                         <ReportView/>
                             {

@@ -23,7 +23,7 @@ export default  function ReportView() {
                             <div className="row">
                                 {(
                                     <button className="btn btn-primary col-lg-2 "  onClick={() => ReportGenerator(marking)}>
-                                        Generate Report PDF
+                                        Download PDF
                                     </button>
                                 )}
                             </div>

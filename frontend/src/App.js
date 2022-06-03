@@ -13,6 +13,7 @@ import UserDashboard from "./components/UserDashboard";
 import UserLogin from "./components/UserLogin";
 import Navbar from "./components/NavBar";
 import UserNavbar from "./components/UserNavBar";
+
 import MarkingScheme from './components/MarkingScheme';
 import ViewMarking from "./components/ViewMarking";
 import AllGroups from "./components/AllGroups";
@@ -30,6 +31,9 @@ import Footer from "./components/Footer";
 import StudentRegister from "./components/StudentRegister";
 import NotFound from "./components/NotFound";
 
+import LandingPage from "./components/LandingPage";
+
+
 export function App() {
     return (
         <div>
@@ -39,14 +43,18 @@ export function App() {
 
             <Router>
                 <Routes>
-
+                    <Route path="/" element={<LandingPage />}></Route>
                     <Route path="/login" element={<StudentLogin />}></Route>
                     <Route path="/register" element={<StudentRegister />}></Route>
                     <Route path="/allstudents" element={<AllStudents />}></Route>
                     <Route path="/allusers" element={<AllUsers />}></Route>
                     <Route path="/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/login" element={<UserLogin />}></Route>
-                    
+
+                    <Route path="/user/dashboard" element={<UserDashboard />}></Route>
+
+                    <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
+
                     <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/allgroups" element={<AllGroups />}></Route>
                     <Route path="/groupregister" element={<GroupRegister />}></Route>

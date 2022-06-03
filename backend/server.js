@@ -13,8 +13,8 @@ const PORT = process.env.PORT || 7000;
 //Space for routes import
 let student = require('./routes/students');
 let user = require('./routes/users');
-let group = require('./routes/Groups');
 let marking = require('./routes/Markings');
+let group = require('./routes/Groups');
 let panelmember = require('./routes/panelmembers');
 let groupassign = require('./routes/groupassigns');
 
@@ -30,6 +30,8 @@ mongoose.connect(process.env.MONGODB,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 })
+
+mongoose.connect(MONGODB)
     .then(() => {
         console.log("MongoDB Successfully Connected");
     })
