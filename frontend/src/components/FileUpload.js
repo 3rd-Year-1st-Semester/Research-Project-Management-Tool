@@ -51,7 +51,7 @@ function FileUpload() {
             </div>
 
         <div className="container-fluid" >
-          <h3 className="text-danger font-weight-bolder border-bottom text-center">Upload files </h3>
+          <h3 className="text-light font-weight-bolder border-bottom text-center">Upload files </h3>
           <FileUploadScreen getsingle={() => getSingleFileslist()} getMultiple={() => getMultipleFilesList()}/>
        </div> 
        <div className="container-fluid mt-5">

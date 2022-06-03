@@ -2,36 +2,34 @@ import React, { useState } from "react";
 import axios from "axios";
 import '../styles/StudentRegister.css';
 
-export default function StudentRegister() {
+export default function StaffRegister() {
 
-    const [student_id, setStudentID] = useState('');
-    const [full_name, setFullName] = useState('');
-    const [email, setEmail] = useState('');
-    const [contact_number, setContactNumber] = useState('');
-    const [faculty, setFaculty] = useState('');
-    const [academic_year, setAcademicYear] = useState('');
-    const [semester, setSemester] = useState('');
-    const [password, setPassword] = useState('');
+    const [ user_id, setuser_id] = useState('');
+    const [ full_name, setfull_name] = useState('');
+    const [email, setemail] = useState('');
+    const [contact_number, setcontact_number] = useState('');
+    const [faculty, setfaculty] = useState('');
+    const [user_role, setuser_role] = useState('');
+    const [user_type, setuser_type] = useState('');
+    const [password, setpassword] = useState('');
 
-    const studentData = {
+    const StaffData = {
 
-        student_id, full_name, email, contact_number, faculty,
-        academic_year, semester, password
-
+        user_id,full_name,email,contact_number,faculty,user_role,user_type,password
     }
 
     //insert data
     const insertData = (e) => {
 
         e.preventDefault();
-        axios.post("http://localhost:7000/student/register/", studentData).then((res) => {
+        axios.post("http://localhost:7000/user/register/", StaffData).then((res) => {
             alert(res.data.message);
             console.log(res.data.message);
             window.location = "/login";
         }).catch((err) => {
             console.log(err);
         })
-        console.log(studentData)
+        console.log(StaffData)
     }
 
     return (
@@ -42,30 +40,30 @@ export default function StudentRegister() {
                         <div className="card my-4">
                             <div className="row g-0">
                                 <div className="col-4 d-none d-xl-block">
-                                    <img src="https://static.sliit.lk/wp-content/uploads/2019/11/27094714/SLIIT-Master-of-Science-in-Information-Management.jpg"
+                                    <img src="https://static.sliit.lk/wp-content/uploads/2019/07/09024816/The-inaugural-general-meeting-of-the-Alumni-Chapter-of-Quantity-Surveyors-of-SLIIT-1.jpg"
                                         className="img-fluid" alt="register_design" />
 
-<img src="https://bmkltsly13vb.compat.objectstorage.ap-mumbai-1.oraclecloud.com/cdn.ft.lk/ftadmin/wp-content/uploads/2016/09/15175352/Untitled-552.jpg"
+<img src="https://static.sliit.lk/wp-content/uploads/2019/09/07120519/SLIIT-OPEN-DAY-2019-was-held-successfully-at-SLIIT-Malabe-Campus15.jpg"
                                         className="img-fluid" alt="register_design" />
                                 </div>
                                 <div className="col">
                                     <form onSubmit={insertData}>
                                         <div className="card-body p-md-5 text-black">
-                                            <h3 className="mb-5 text-uppercase">Student Sign Up</h3>
+                                            <h3 className="mb-5 text-uppercase">Staff Sign Up</h3>
 
                                             <div className="row">
                                                 <div className="col-md-6 mb-4">
                                                     <div className="form-outline">
-                                                        <input type="text" name="student_id" id="student_id" className="form-control form-control-lg" onChange={(e) => {
-                                                            setStudentID(e.target.value);
+                                                        <input type="text" name="user_id" id="user_id" className="form-control form-control-lg" onChange={(e) => {
+                                                            setuser_id(e.target.value);
                                                         }} />
-                                                        <label className="form-label" for="student_id">SLIIT ID</label>
+                                                        <label className="form-label" for="user_id">SLIIT ID</label>
                                                     </div>
                                                 </div>
                                                 <div className="col-md-6 mb-4">
                                                     <div className="form-outline">
                                                         <input type="text" name="full_name" id="full_name" className="form-control form-control-lg" onChange={(e) => {
-                                                            setFullName(e.target.value);
+                                                            setfull_name(e.target.value);
                                                         }} />
                                                         <label className="form-label" for="full_name">Full Name</label>
                                                     </div>
@@ -76,7 +74,7 @@ export default function StudentRegister() {
                                                 <div className="col-md-6 mb-4">
                                                     <div className="form-outline">
                                                         <input type="email" name="email" id="email" className="form-control form-control-lg" onChange={(e) => {
-                                                            setEmail(e.target.value);
+                                                            setemail(e.target.value);
                                                         }} />
                                                         <label className="form-label" for="email">Email</label>
                                                     </div>
@@ -84,7 +82,7 @@ export default function StudentRegister() {
                                                 <div className="col-md-6 mb-4">
                                                     <div className="form-outline">
                                                         <input type="text" name="contact_number" id="contact_number" className="form-control form-control-lg" onChange={(e) => {
-                                                            setContactNumber(e.target.value);
+                                                            setcontact_number(e.target.value);
                                                         }} />
                                                         <label className="form-label" for="contact_number">Contact Number</label>
                                                     </div>
@@ -93,7 +91,7 @@ export default function StudentRegister() {
 
                                             <div className="form-outline mb-4">
                                                 <select name="faculty" id="faculty" className="form-select" onChange={(e) => {
-                                                    setFaculty(e.target.value);
+                                                    setfaculty(e.target.value);
                                                 }}>
                                                     <option value="">Select one...</option>
                                                     <option value="Faculty of Computing">Faculty of Computing</option>
@@ -105,27 +103,28 @@ export default function StudentRegister() {
                                             </div>
 
                                             <div className="form-outline mb-4">
-                                                <input type="text" name="academic_year" id="academic_year" className="form-control form-control-lg" onChange={(e) => {
-                                                    setAcademicYear(e.target.value);
+                                                <input type="text" name="user_role" id="user_role" className="form-control form-control-lg" onChange={(e) => {
+                                                    setuser_role(e.target.value);
                                                 }} />
-                                                <label className="form-label" for="academic_year">Academic Year</label>
+                                                <label className="form-label" for="user_role">User Role</label>
                                             </div>
 
                                             <div className="form-outline mb-4">
-                                                <select name="semester" id="semester" className="form-select" onChange={(e) => {
-                                                    setSemester(e.target.value);
+                                                <select name="user_type" id="user_type" className="form-select" onChange={(e) => {
+                                                    setuser_type(e.target.value);
                                                 }}>
                                                     <option value="">Select one...</option>
-                                                    <option value="1st Semester (Jan-Jun)">1st Semester (Jan-Jun)</option>
-                                                    <option value="2nd Semester (Jan-Jun)">2nd Semester (Jan-Jun)</option>
-                                                    <option value="1st Semester (Jun-Dec)">1st Semester (Jun-Dec)</option>
-                                                    <option value="2nd Semester (Jun-Dec)">2nd Semester (Jun-Dec)</option>
+                                                    <option value="Admin">Admin</option>
+                                                    <option value="Superviser">Superviser</option>
+                                                    <option value="Co-Superviser">Co-Superviser</option>
+                                                   
                                                 </select>
+                                                <label className="form-label" for="user_type">User Type</label>
                                             </div>
 
                                             <div className="form-outline mb-4">
-                                                <input type="password" name="password" id="password" className="form-control form-control-lg" onChange={(e) => {
-                                                    setPassword(e.target.value);
+                                            <input type="text" name="password" id="password" className="form-control form-control-lg" onChange={(e) => {
+                                                    setpassword(e.target.value);
                                                 }} />
                                                 <label className="form-label" for="password">Password</label>
                                             </div>

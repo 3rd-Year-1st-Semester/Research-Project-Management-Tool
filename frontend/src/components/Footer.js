@@ -4,9 +4,9 @@ import '../styles/Footer.css';
 function Footer() {
     return (
 
-        <div class="body">
+        <div class="body mt-5">
 
-            <footer class="bg-dark text-center text-lg-start text-white footerstyle">
+            <footer class="bg-dark text-center text-lg-start text-white footerstyle ">
                 <div class="container p-4">
                     <div class="row mt-4">
                         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">

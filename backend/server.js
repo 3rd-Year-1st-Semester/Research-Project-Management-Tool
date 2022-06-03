@@ -17,6 +17,10 @@ let marking = require('./routes/Markings');
 let group = require('./routes/Groups');
 let panelmember = require('./routes/panelmembers');
 let groupassign = require('./routes/groupassigns');
+//ashan
+let TopicRegistration = require('./routes/TopicRegistrations');
+let TopicApprove = require('./routes/TopicApproves');
+let TopicRejected = require('./routes/TopicRejecteds');
 
 //Space for route configuration
 app.use('/student', student);
@@ -25,8 +29,12 @@ app.use("/group", group);
 app.use("/Markings", marking);
 app.use('/panelmember', panelmember);
 app.use('/groupassign', groupassign);
+//ashan
+app.use('/TopicRegistration',TopicRegistration);
+app.use('/TopicApprove',TopicApprove);
+app.use('/TopicRejected',TopicRejected);
 
-mongoose.connect(process.env.MONGODB, {
+mongoose.connect("mongodb+srv://admin:admin@research-project-manage.l8uyu.mongodb.net/research_project_manage?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })

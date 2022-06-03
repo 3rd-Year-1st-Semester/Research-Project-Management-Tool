@@ -28,8 +28,20 @@ import StudentFileUpload from './components/StudentFileUpload';
 import FileAdminView from './components/SubmissionView';
 import Footer from "./components/Footer";
 import StudentRegister from "./components/StudentRegister";
+
+import StaffRegister from "./components/StaffRegister";
 import LandingPage from "./components/LandingPage";
 import AdminDashboard from "./components/AdminDashboard";
+
+//ashan
+import TopicRegistration from './components/TopicRegistration';
+import TopicView from './components/TopicView';
+import TopicViewSuper from './components/TopicViewSuper';
+import TopicUpdate from './components/TopicUpdate';
+import TopicResultSend from './components/TopicResultSend';
+import ApprovedTopics from './components/ApprovedTopics';
+import RejectedTopics from './components/RejectedTopics';
+import TopicResultSend2 from './components/TopicResultSend2';
 
 
 export function App() {
@@ -48,6 +60,7 @@ export function App() {
                     <Route path="/allusers" element={<AllUsers />}></Route>
                     <Route path="/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/login" element={<UserLogin />}></Route>
+                    <Route path="/user/register" element={<StaffRegister />}></Route>
 
                     <Route path="/user/dashboard" element={<UserDashboard />}></Route>
                     <Route path="/admin/dashboard" element={<AdminDashboard />}></Route>
@@ -70,6 +83,17 @@ export function App() {
                     <Route path="/students/filesdownload" element={<FileStudentView />} />
                     <Route path="/students/submission" element={<StudentFileUpload />} />
                     <Route path="/admin/Submitfiles" element={<FileAdminView />} />
+
+                    <Route path='/a'   element={<TopicRegistration/>} > </Route>
+                    <Route path='/topicview'   element={<TopicView/>} > </Route>
+                    <Route path='/topicviewsuper'   element={<TopicViewSuper/>} > </Route>
+                    <Route path='/updatetopic/:id'   element={<TopicUpdate/>} > </Route>
+                    <Route path='/topicresult/:id'   element={<TopicResultSend/>} > </Route>
+                    <Route path='/approvedtopic'   element={<ApprovedTopics/>} > </Route>
+                    <Route path='/rejectedtopic'   element={<RejectedTopics/>} > </Route>
+                    <Route path='/topicresult2/:id'   element={<TopicResultSend2/>} > </Route>
+
+
 
                 </Routes>
                 <Footer />

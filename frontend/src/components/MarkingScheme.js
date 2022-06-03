@@ -106,8 +106,8 @@ export default function MarkingScheme() {
             <div class="container-fluid px-1 py-5 mx-auto">
                 <div class="row d-flex justify-content-center">
                     <div class="col-xl-10 col-lg-8 col-md-9 col-11 text-center">
-                        <h3 class="blue-text fw-bold">Assignment Marking Scheme</h3>
-                        <h6><p class="black-text fw-bold mt-3" >Note that the project will be evaluated individually (Unless specified) according to the below
+                        <h3 class="text-light fw-bold">Assignment Marking Scheme</h3>
+                        <h6><p class="text-light  mt-3" >Note that the project will be evaluated individually (Unless specified) according to the below
                             criteria.
                         </p></h6>
                         <div class="card ">
