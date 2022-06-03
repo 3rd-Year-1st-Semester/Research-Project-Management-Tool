@@ -40,7 +40,8 @@ export default function StudentLogin() {
                 <center>
                     <form onSubmit={StudentLogin}>
                         <div className='form-group col-3'>
-                            <h3 className="h3 mb-3 font-weight-normal">Login Panel</h3>
+                        <img className="mb-3 mt-5" src="https://png.pngtree.com/png-vector/20191003/ourlarge/pngtree-user-login-or-authenticate-icon-on-gray-background-flat-icon-ve-png-image_1786166.jpg" alt="" width="100" height="100" />  
+                            <h3 className="h3 mb-3 font-weight-normal text-light">Student Login </h3>
                             <label htmlFor="inputID" className="sr-only">Student ID</label>
                             <input type="text" id="inputID" className="form-control" placeholder="Student ID" onChange={(e) => {
                                 setStudentID(e.target.value);
@@ -55,7 +56,7 @@ export default function StudentLogin() {
                         </div>
                         <br />
                         <div className='form-group'>
-                            <input type="submit" className="btn btn-lg btn-primary btn-block col-3" name="submit" value="Login" />
+                            <input type="submit" className="btn btn-lg btn-dark btn-block fw-bold col-3" name="submit" value="Login" />
                         </div>
                     </form>
                 </center>
