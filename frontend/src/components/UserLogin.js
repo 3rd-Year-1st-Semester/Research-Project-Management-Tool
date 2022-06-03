@@ -40,10 +40,10 @@ export default function UserLogin() {
                 
                 <center>
                     <form onSubmit={UserLogin}>
-                    <img className="mb-3 mt-5" src="https://static3.depositphotos.com/1005574/198/v/600/depositphotos_1982796-stock-illustration-login-icon-button.jpg" alt="" width="100" height="100" />
-                        <div className='form-group col-3'>
-                             
-                            <h3 className="h3 mb-3 font-weight-normal">Login Panel</h3>
+                        <div className='form-group col-3 '>
+                        <img className="mb-3 mt-5" src="https://png.pngtree.com/png-vector/20190919/ourlarge/pngtree-user-login-or-authenticate-icon-on-gray-background-flat-icon-ve-png-image_1742031.jpg" alt="" width="100" height="100" />  
+                            <h3 className="h3  text-light mb-3 font-weight-normal">User Login</h3>
+                            
                             <label htmlFor="inputID" className="sr-only">User ID</label>
                             <input type="text" id="inputID" className="form-control" placeholder="User ID" onChange={(e) => {
                                 setUserID(e.target.value);
@@ -58,7 +58,7 @@ export default function UserLogin() {
                         </div>
                         <br />
                         <div className='form-group'>
-                            <input type="submit" className="btn btn-lg btn-primary btn-block col-3" name="submit" value="Login" />
+                            <input type="submit" className="btn btn-lg btn-dark btn-block fw-bold col-3" name="submit" value="Login" />
                         </div>
                     </form>
                 </center>
