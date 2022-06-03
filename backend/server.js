@@ -19,19 +19,17 @@ let panelmember = require('./routes/panelmembers');
 let groupassign = require('./routes/groupassigns');
 
 //Space for route configuration
-app.use('/student',student);
-app.use('/user',user);
-app.use("/group",group);
-app.use("/Markings",marking);
-app.use('/panelmember',panelmember);
-app.use('/groupassign',groupassign);
+app.use('/student', student);
+app.use('/user', user);
+app.use("/group", group);
+app.use("/Markings", marking);
+app.use('/panelmember', panelmember);
+app.use('/groupassign', groupassign);
 
-mongoose.connect(process.env.MONGODB,{
-    useNewUrlParser:true,
-    useUnifiedTopology:true
+mongoose.connect(process.env.MONGODB, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 })
-
-mongoose.connect(MONGODB)
     .then(() => {
         console.log("MongoDB Successfully Connected");
     })
@@ -40,7 +38,7 @@ mongoose.connect(MONGODB)
     })
 
 
-app.get(("/"),(req,res,next)=>{
+app.get(("/"), (req, res, next) => {
     res.send("<center><h1>📚 Research Project Upload System API</h1><h3>Developed by SE Project Group</h3></center>")
     next();
 })

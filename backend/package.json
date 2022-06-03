@@ -8,7 +8,6 @@
     "frontend": "cd ../frontend && npm start",
     "serverproject": "cd ../serverproject && npm start",
     "start":"concurrently \"npm run backend\" \"npm run frontend\" \"npm run serverproject\""
-    "start": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "keywords": [],
   "author": "",
