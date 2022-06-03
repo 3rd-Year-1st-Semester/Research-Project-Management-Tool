@@ -12,7 +12,6 @@ import StudentMarking from "./components/StudentMarking";
 import UserDashboard from "./components/UserDashboard";
 import UserLogin from "./components/UserLogin";
 import Navbar from "./components/NavBar";
-import UserNavbar from "./components/UserNavBar";
 
 import MarkingScheme from './components/MarkingScheme';
 import ViewMarking from "./components/ViewMarking";
@@ -31,11 +30,8 @@ import Footer from "./components/Footer";
 import StudentRegister from "./components/StudentRegister";
 
 import StaffRegister from "./components/StaffRegister";
-
- 
-
-
 import LandingPage from "./components/LandingPage";
+import AdminDashboard from "./components/AdminDashboard";
 
 //ashan
 import TopicRegistration from './components/TopicRegistration';
@@ -67,8 +63,7 @@ export function App() {
                     <Route path="/user/register" element={<StaffRegister />}></Route>
 
                     <Route path="/user/dashboard" element={<UserDashboard />}></Route>
-
-                    <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
+                    <Route path="/admin/dashboard" element={<AdminDashboard />}></Route>
 
                     <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/allgroups" element={<AllGroups />}></Route>

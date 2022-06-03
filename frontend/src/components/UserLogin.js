@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from "react";
 import axios from 'axios';
 import '../styles/login.css';
+import jwtDecode from 'jwt-decode';
 
 export default function UserLogin() {
 
-    if (localStorage.user_token) {
+    const token = localStorage.user_token;
+
+    if (token) {
         window.location = "/user/dashboard";
     }
 
@@ -24,8 +27,13 @@ export default function UserLogin() {
 
             const { data: res } = await axios.post('http://localhost:7000/user/login', userData);
             localStorage.setItem("user_token", res.data);
-            window.location = "/user/dashboard"
-
+            
+            if(res.role == "Staff"){
+                window.location = "/user/dashboard"
+            }
+            else{
+                window.location = "/admin/dashboard"
+            }
         }
         catch (error) {
             console.log(error);
