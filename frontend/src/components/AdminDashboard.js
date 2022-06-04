@@ -21,9 +21,7 @@ function AdminDashboard() {
                         <img src="https://img.icons8.com/color/48/undefined/report-card.png" /><br />
                         Create Marking
 
-                    <button onClick={()=>window.location = "/markingstudent"} style={{ width: '150px', height: '150px' }} className="btn btn-dark text-light font-weight-bold">
-                        <img src="https://img.icons8.com/color/48/undefined/report-card.png" /><br />
-                        Marking
+                   
 
                     </button>
 
@@ -81,10 +79,7 @@ function AdminDashboard() {
 
 
 
-                    <button style={{ width: '150px', height: '150px' }} className="btn btn-dark text-light font-weight-bold">
-                        <img src="https://img.icons8.com/color/48/undefined/person-male.png" /><br />
-                        Profile
-                    </button>
+                   
 
 
                 </div>
