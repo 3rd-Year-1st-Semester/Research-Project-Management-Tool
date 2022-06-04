@@ -82,7 +82,7 @@ var x = setInterval(function() {
        <div className="container-fluid mt-5">
          <div className="row">
            <div className="col-6">
-             <h4 className="text-success font-weight-bold">uploaded Files List</h4>
+             <h4 className="text-light font-weight-bold">uploaded Files List</h4>
              <br/>
              <div className="row">
              {singleFiles.map((file, index) =>
