@@ -62,11 +62,11 @@ function FileStudentView() {
                 <div >
 
                     <div className="col-6">
-                        <h4 className="text-success font-weight-bold">Downloadable Files </h4>
+                        <h4 className="text-light font-weight-bold">Downloadable Files </h4>
                         <br />
                         {singleFiles.map((file, index) =>
                             <div className='shadow p-3 mb-5 bg-body rounded'>
-                                <div className="card border-primary mb-3" >
+                                
                                     <div class="card-header">{file.fileName}</div>
                                     <div className="col-6">
                                         <div className="card mb-2 border-0 p-0">
@@ -75,7 +75,7 @@ function FileStudentView() {
                                         </div>
                                     </div>
 
-                                </div>
+                                
                             </div>
                         )}
                     </div>
