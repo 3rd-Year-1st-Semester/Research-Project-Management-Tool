@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const Student = require('../models/Student');
 const bcrypt = require('bcrypt');
-
 router.post('/register', async (req, res) => {
 
     try {

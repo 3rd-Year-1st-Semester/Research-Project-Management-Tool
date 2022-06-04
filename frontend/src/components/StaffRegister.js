@@ -23,7 +23,7 @@ export default function StaffRegister() {
     const insertData = (e) => {
 
         e.preventDefault();
-        axios.post("http://localhost:7000/user/register/", StaffData).then((res) => {
+        axios.post("https://research-tool-backend.herokuapp.com/user/register/", StaffData).then((res) => {
             alert(res.data.message);
             console.log(res.data.message);
             window.location = "/login";
