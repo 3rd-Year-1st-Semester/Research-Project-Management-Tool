@@ -229,7 +229,6 @@ average_marks6:{
     type:String,
     required:true
 },
-
 good_marks6:{
     type:String,
     required:true
