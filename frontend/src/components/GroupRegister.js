@@ -63,7 +63,7 @@ function GroupRegister() {
             created_by
         }
 
-        axios.post('http://localhost:7000/group/insert', groupObj)
+        axios.post('https://research-tool-backend.herokuapp.com/group/insert', groupObj)
             .then((res) => {
 
                 alert(res.data);

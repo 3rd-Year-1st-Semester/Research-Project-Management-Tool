@@ -6,7 +6,7 @@ function AllStudents() {
     const [student, setStudent] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:7000/student')
+        axios.get('https://research-tool-backend.herokuapp.com/student')
             .then((res) => {
                 setStudent(res.data);
                 console.log(res.data);
@@ -17,7 +17,7 @@ function AllStudents() {
     }, [])
 
     const deleteStudent = (id) => {
-        axios.delete(`http://localhost:7000/student/delete/${id}`)
+        axios.delete(`https://research-tool-backend.herokuapp.com/student/delete/${id}`)
             .then((res) => {
                 alert(res.data);
                 window.location = '/allstudents'
@@ -28,12 +28,12 @@ function AllStudents() {
     }
 
     return (
-        <div className='container'>
+        <div className='container mt-5' style={{marginBottom:'100px'}}>
 
             <center>
-                <h1>All Students</h1>
+                <h1 className='text-light mb-2'>All Students</h1>
 
-                <table className='table table-bordered text-center'>
+                <table className='table table-bordered text-center bg-light'>
                     <thead>
                         <tr>
                             <th scope='col'>Student ID</th>

@@ -7,7 +7,7 @@ function ViewAssignPanelMembers() {
 
     useEffect(() => {
 
-        axios.get('http://localhost:7000/groupassign')
+        axios.get('https://research-tool-backend.herokuapp.com/groupassign')
             .then((res) => {
                 setPanelAndGroup(res.data);
                 console.log(res.data);

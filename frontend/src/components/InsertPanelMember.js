@@ -6,7 +6,7 @@ function InsertPanelMember() {
     const [user, setUser] = useState([]);
     
     useEffect(() => {
-        axios.get('http://localhost:7000/user')
+        axios.get('https://research-tool-backend.herokuapp.com/user')
             .then((res) => {
                 setUser(res.data);
                 console.log(res.data);
@@ -24,7 +24,7 @@ function InsertPanelMember() {
             email                        
         }
 
-        axios.post('http://localhost:7000/panelmember/insert',data)
+        axios.post('https://research-tool-backend.herokuapp.com/panelmember/insert',data)
         .then((res)=>{
             alert(res.data);
         })

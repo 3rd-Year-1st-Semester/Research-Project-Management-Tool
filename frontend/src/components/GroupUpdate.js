@@ -9,7 +9,7 @@ function GroupUpdate() {
     const [group, setGroup] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:7000/group/${id}`)
+        axios.get(`https://research-tool-backend.herokuapp.com/group/${id}`)
             .then((res) => {
                 setGroup(res.data);
                 console.log(res.data);
@@ -19,7 +19,7 @@ function GroupUpdate() {
 
     function updateGroup(event) {
         event.preventDefault();
-        axios.put(`http://localhost:7000/group/update/${id}`, group).then(() => {
+        axios.put(`https://research-tool-backend.herokuapp.com/group/update/${id}`, group).then(() => {
             alert("Group update Successfully");
         }).catch((err) => {
             console.log(err);

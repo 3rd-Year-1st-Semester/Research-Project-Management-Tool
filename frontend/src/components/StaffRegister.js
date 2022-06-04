@@ -4,18 +4,19 @@ import '../styles/StudentRegister.css';
 
 export default function StaffRegister() {
 
-    const [ user_id, setuser_id] = useState('');
-    const [ full_name, setfull_name] = useState('');
+    const [user_id, setuser_id] = useState('');
+    const [full_name, setfull_name] = useState('');
     const [email, setemail] = useState('');
     const [contact_number, setcontact_number] = useState('');
     const [faculty, setfaculty] = useState('');
-    const [user_role, setuser_role] = useState('');
     const [user_type, setuser_type] = useState('');
     const [password, setpassword] = useState('');
 
+    const user_role = "Staff";
+
     const StaffData = {
 
-        user_id,full_name,email,contact_number,faculty,user_role,user_type,password
+        user_id, full_name, email, contact_number, faculty, user_role, user_type, password
     }
 
     //insert data
@@ -43,7 +44,7 @@ export default function StaffRegister() {
                                     <img src="https://static.sliit.lk/wp-content/uploads/2019/07/09024816/The-inaugural-general-meeting-of-the-Alumni-Chapter-of-Quantity-Surveyors-of-SLIIT-1.jpg"
                                         className="img-fluid" alt="register_design" />
 
-<img src="https://static.sliit.lk/wp-content/uploads/2019/09/07120519/SLIIT-OPEN-DAY-2019-was-held-successfully-at-SLIIT-Malabe-Campus15.jpg"
+                                    <img src="https://static.sliit.lk/wp-content/uploads/2019/09/07120519/SLIIT-OPEN-DAY-2019-was-held-successfully-at-SLIIT-Malabe-Campus15.jpg"
                                         className="img-fluid" alt="register_design" />
                                 </div>
                                 <div className="col">
@@ -103,27 +104,19 @@ export default function StaffRegister() {
                                             </div>
 
                                             <div className="form-outline mb-4">
-                                                <input type="text" name="user_role" id="user_role" className="form-control form-control-lg" onChange={(e) => {
-                                                    setuser_role(e.target.value);
-                                                }} />
-                                                <label className="form-label" for="user_role">User Role</label>
-                                            </div>
-
-                                            <div className="form-outline mb-4">
                                                 <select name="user_type" id="user_type" className="form-select" onChange={(e) => {
                                                     setuser_type(e.target.value);
                                                 }}>
                                                     <option value="">Select one...</option>
-                                                    <option value="Admin">Admin</option>
                                                     <option value="Superviser">Superviser</option>
                                                     <option value="Co-Superviser">Co-Superviser</option>
-                                                   
+
                                                 </select>
                                                 <label className="form-label" for="user_type">User Type</label>
                                             </div>
 
                                             <div className="form-outline mb-4">
-                                            <input type="text" name="password" id="password" className="form-control form-control-lg" onChange={(e) => {
+                                                <input type="text" name="password" id="password" className="form-control form-control-lg" onChange={(e) => {
                                                     setpassword(e.target.value);
                                                 }} />
                                                 <label className="form-label" for="password">Password</label>

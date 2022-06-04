@@ -6,7 +6,7 @@ function AllUsers() {
     const [user, setUser] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:7000/user')
+        axios.get('https://research-tool-backend.herokuapp.com/user')
             .then((res) => {
                 setUser(res.data);
                 console.log(res.data);
@@ -17,7 +17,7 @@ function AllUsers() {
     }, [])
 
     const deleteUser = (id) => {
-        axios.delete(`http://localhost:7000/user/delete/${id}`)
+        axios.delete(`https://research-tool-backend.herokuapp.com/user/delete/${id}`)
             .then((res) => {
                 alert(res.data);
                 window.location = '/allusers'
@@ -31,9 +31,9 @@ function AllUsers() {
         <div className='container'>
 
             <center>
-                <h1>All Users</h1>
+                <h1 className='text-light'>All Users</h1>
 
-                <table className='table table-bordered text-center'>
+                <table className='table table-bordered text-center bg-light'>
                     <thead>
                         <tr>
                             <th scope='col'>User ID</th>
