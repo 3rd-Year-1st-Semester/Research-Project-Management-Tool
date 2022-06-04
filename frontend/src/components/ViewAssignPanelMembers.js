@@ -23,7 +23,8 @@ function ViewAssignPanelMembers() {
             <center>
                 <h2 className='mt-5 card'>Assigned panel members to groups</h2>
             </center>
-            <table className='table mt-5 table-striped bg-light' style={{ marginTop: '100px', marginBottom: '200px' }}>
+            <div>
+            <table className='table mt-5 table-striped table-bordered bg-light text-center' style={{ marginTop: '100px', marginBottom: '100px' }}>
                 <thead>
                     <tr>
                         <th>Panel Member Name</th>
@@ -43,6 +44,7 @@ function ViewAssignPanelMembers() {
                     }
                 </tbody>
             </table>
+            </div>
         </div>
     );
 }

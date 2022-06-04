@@ -7,11 +7,12 @@ function Navbar() {
     const token = localStorage.getItem('std_token');
     const decode = jwtDecode(token);
 
-    const [student,setStudent] = useState('');
+    const [student,setStudent] = useState([]);
     console.log(student);
+    
     useEffect(()=>{
 
-        axios.get(`http://localhost:7000/student/${decode._id}`)
+        axios.get(`https://research-tool-backend.herokuapp.com/student/${decode._id}`)
         .then((res)=>{
             setStudent(res.data);
         })

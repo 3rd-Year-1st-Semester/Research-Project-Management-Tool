@@ -24,7 +24,7 @@ function ViewPanelMembers() {
 
     useEffect(() => {
 
-        axios.get('http://localhost:7000/group')
+        axios.get('https://research-tool-backend.herokuapp.com/group')
             .then((res) => {
                 setGroup(res.data);
                 console.log(res.data);
@@ -38,7 +38,7 @@ function ViewPanelMembers() {
     //delete panel member
     const deletePanelMember = (id) => {
 
-        axios.delete(`http://localhost:7000/panelmember/delete/${id}`)
+        axios.delete(`https://research-tool-backend.herokuapp.com/panelmember/delete/${id}`)
             .then(() => {
                 alert("Panel Member removed successfully");
                 window.location = "/user/viewpanelmembers";
@@ -56,7 +56,7 @@ function ViewPanelMembers() {
             full_name, group_name
         }
 
-        axios.post('http://localhost:7000/groupassign/insert',data)
+        axios.post('https://research-tool-backend.herokuapp.com/groupassign/insert',data)
             .then((res) => {
                 alert(res.data);
             })
@@ -69,12 +69,12 @@ function ViewPanelMembers() {
 
     return (
         <div className="container">
-            <table>
+            <table className='table' style={{marginBottom:"100px"}}>
                 <tr>
                     <td className='col-4'>
                         <center>
-                            <h2 className='mt-5'>Panel Members</h2>
-                            <table className='table table-bordered text-center'>
+                            <h2 className='mt-5 text-light'>Panel Members</h2>
+                            <table className='table table-bordered bg-light text-center'>
                                 <thead>
                                     <tr>
                                         <th scope='col'>User ID</th>
@@ -103,7 +103,7 @@ function ViewPanelMembers() {
                         </center>
                     </td>
                     <td></td>
-                    <td className='col-4'>
+                    <td className='col-4 text-light'>
                         <center>
                             <h2 className='mt-5'>Assign to group</h2>
 
@@ -132,7 +132,7 @@ function ViewPanelMembers() {
                                         })
                                     }
                                 </select><br />
-                                <input type="submit" name="submit" value="Assign" className='btn btn-success form-control' />
+                                <input type="submit" name="submit" value="Assign" className='btn btn-warning form-control' />
                             </form>
                         </center>
                     </td>

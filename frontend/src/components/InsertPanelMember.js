@@ -4,7 +4,7 @@ import axios from 'axios';
 function InsertPanelMember() {
 
     const [user, setUser] = useState([]);
-    
+
     useEffect(() => {
         axios.get('https://research-tool-backend.herokuapp.com/user')
             .then((res) => {
@@ -16,32 +16,31 @@ function InsertPanelMember() {
             })
     }, [])
 
-    const setPanelMembers = (user_id,full_name,email) =>{
+    const setPanelMembers = (user_id, full_name, email) => {
 
         const data = {
             user_id,
             full_name,
-            email                        
+            email
         }
 
-        axios.post('https://research-tool-backend.herokuapp.com/panelmember/insert',data)
-        .then((res)=>{
-            alert(res.data);
-        })
-        .catch((err)=>{
-            console.log(err);
-        })
+        axios.post('https://research-tool-backend.herokuapp.com/panelmember/insert', data)
+            .then((res) => {
+                alert(res.data);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
 
     }
 
     return (
         <div className='container'>
 
-            <h2>Insert Panel members</h2>
-
             <center>
+                <h2 className='mt-5 text-light'>Insert Panel members</h2>
 
-                <table className='table table-bordered text-center'>
+                <table className='table table-bordered bg-light text-center mt-5 mb-5'>
                     <thead>
                         <tr>
                             <th scope='col'>User ID</th>
@@ -67,8 +66,8 @@ function InsertPanelMember() {
                                         <td>{value.faculty}</td>
                                         <td>{value.user_role}</td>
                                         <td>{value.user_type}</td>
-                                        <td><button className='btn btn-success' onClick={()=>{setPanelMembers(value.user_id,value.full_name,value.email)}}>Insert to Panel Members</button></td>
-                                        
+                                        <td><button className='btn btn-success' onClick={() => { setPanelMembers(value.user_id, value.full_name, value.email) }}>Insert to Panel Members</button></td>
+
                                     </tr>
                                 )
 

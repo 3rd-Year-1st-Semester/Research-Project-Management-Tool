@@ -33,7 +33,7 @@ function AllUsers() {
             <center>
                 <h1 className='text-light'>All Users</h1>
 
-                <table className='table table-bordered text-center bg-light'>
+                <table className='table table-bordered text-center bg-light' style={{marginTop:'50px',marginBottom:'150px'}}>
                     <thead>
                         <tr>
                             <th scope='col'>User ID</th>

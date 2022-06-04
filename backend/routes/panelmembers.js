@@ -54,7 +54,6 @@ router.route('/delete/:id').delete((req, res) => {
 
 })
 
-
 router.route('/update/:id').put((req, res) => {
 
     const updateObj = req.body;

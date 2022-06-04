@@ -68,7 +68,6 @@ export function App() {
                     <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/allgroups" element={<AllGroups />}></Route>
                     <Route path="/groupregister" element={<GroupRegister />}></Route>
-                    <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
                     <Route path="/user/groupupdate/:id" element={<GroupUpdate />}></Route>
                     <Route path="/user/insertpanelmember" element={<InsertPanelMember />} />
                     <Route path="/user/viewpanelmembers" element={<ViewPanelMembers />} />
