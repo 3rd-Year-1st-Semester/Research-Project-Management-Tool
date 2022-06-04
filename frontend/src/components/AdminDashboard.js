@@ -20,6 +20,11 @@ function AdminDashboard() {
                     <button onClick={()=>window.location = "/marking"} style={{ width: '150px', height: '150px' }} className="btn btn-dark text-light font-weight-bold">
                         <img src="https://img.icons8.com/color/48/undefined/report-card.png" /><br />
                         Create Marking
+
+                    <button onClick={()=>window.location = "/markingstudent"} style={{ width: '150px', height: '150px' }} className="btn btn-dark text-light font-weight-bold">
+                        <img src="https://img.icons8.com/color/48/undefined/report-card.png" /><br />
+                        Marking
+
                     </button>
 
                 </div>
@@ -68,9 +73,17 @@ function AdminDashboard() {
                 </div>
                 <div class="col-lg-3 col-md-6">
 
+
                 <button onClick={()=>window.location = "/markingview"} style={{ width: '150px', height: '150px' }} className="btn btn-dark text-light font-weight-bold">
                         <img src="https://img.icons8.com/color/48/undefined/report-card.png" /><br />
                         View Marking
+                    </button>
+
+
+
+                    <button style={{ width: '150px', height: '150px' }} className="btn btn-dark text-light font-weight-bold">
+                        <img src="https://img.icons8.com/color/48/undefined/person-male.png" /><br />
+                        Profile
                     </button>
 
 

@@ -57,12 +57,12 @@ function FileUpload() {
        <div className="container-fluid mt-5">
          <div className="row">
            <div className="col-6">
-             <h4 className="text-success font-weight-bold">uploaded Files List</h4>
+             <h4 className="text-light font-weight-bold">uploaded Files List</h4>
              <br/>
              <div className="row">
              {singleFiles.map((file, index) =>
              <div className='shadow p-3 mb-5 bg-body rounded'>
-                    <div className="card border-primary mb-3" >
+                    
                         <div class="card-header">{file.fileName}</div>
                             <div className="col-6">
                                 <div className="card mb-2 border-0 p-0">
@@ -73,7 +73,7 @@ function FileUpload() {
                                 </div>
                             </div>
                         
-                    </div>
+                    
                     </div>
                         )}
              </div>
