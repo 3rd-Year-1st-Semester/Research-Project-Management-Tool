@@ -24,7 +24,7 @@ export default function StudentRegister() {
     const insertData = (e) => {
 
         e.preventDefault();
-        axios.post("http://localhost:7000/student/register/", studentData).then((res) => {
+        axios.post("https://research-tool-backend.herokuapp.com/student/register/", studentData).then((res) => {
             alert(res.data.message);
             console.log(res.data.message);
             window.location = "/login";

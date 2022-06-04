@@ -25,7 +25,7 @@ export default function UserLogin() {
         e.preventDefault();
         try {
 
-            const { data: res } = await axios.post('http://localhost:7000/user/login', userData);
+            const { data: res } = await axios.post('https://research-tool-backend.herokuapp.com/user/login', userData);
             localStorage.setItem("user_token", res.data);
             
             if(res.role == "Staff"){

@@ -22,7 +22,7 @@ export default function StudentLogin() {
         e.preventDefault();
         try {
 
-            const { data: res } = await axios.post('http://localhost:7000/student/login', studentData);
+            const { data: res } = await axios.post('https://research-tool-backend.herokuapp.com/student/login', studentData);
             localStorage.setItem("std_token", res.data);
             window.location = "/dashboard"
 

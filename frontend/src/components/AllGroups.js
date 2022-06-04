@@ -7,7 +7,7 @@ function AllGroups() {
 
     useEffect(() => {
 
-        axios.get('http://localhost:7000/group/')
+        axios.get('https://research-tool-backend.herokuapp.com/group/')
             .then((res) => {
                 setGroup(res.data);
             })
@@ -21,7 +21,7 @@ function AllGroups() {
     //Delete Groups
     const deleteGroup = (id) => {
 
-        axios.delete(`http://localhost:7000/group/delete/${id}`)
+        axios.delete(`https://research-tool-backend.herokuapp.com/group/delete/${id}`)
             .then((res) => {
                 alert(res.data);
                 window.location = "/user/allgroups"

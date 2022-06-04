@@ -11,7 +11,7 @@ function ViewPanelMembers() {
 
     useEffect(() => {
 
-        axios.get('http://localhost:7000/panelmember')
+        axios.get('https://research-tool-backend.herokuapp.com/panelmember')
             .then((res) => {
                 setPanelMembers(res.data);
                 console.log(res.data);
