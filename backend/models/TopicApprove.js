@@ -4,34 +4,34 @@ const Schema = mongoose.Schema;
 
 const topicApproveSchema = new Schema({
 
-    // studentId:{
-    //     type:String,
-    //     required:true
-    // },
+    studentId:{
+        type:String,
+        required:true
+    },
 
-    // fullName:{
-    //     type:String,
-    //     required:true
-    // },
-    // groupName: {
-    //     type:String,
-    //     required:true
-    // },
+    fullName:{
+        type:String,
+        required:true
+    },
+    groupName: {
+        type:String,
+        required:true
+    },
 
-    // faculty:{
-    //     type:String,
-    //     required:true
-    // },
+    faculty:{
+        type:String,
+        required:true
+    },
 
-    // academicYear:{
-    //     type:String,
-    //     required:true,
-    // },
+    academicYear:{
+        type:String,
+        required:true,
+    },
 
-    // semester:{
-    //     type:String,
-    //     required:true
-    // },
+    semester:{
+        type:String,
+        required:true
+    },
    
     subjectName : {
         type:String,

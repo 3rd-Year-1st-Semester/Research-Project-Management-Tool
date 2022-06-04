@@ -110,7 +110,7 @@ export const withRouter = (WrappedComponent) => (props) => {
           
 
 <br/><br/><br/><br/><br/>
-      <div className="container">
+      <div class="card">
         <h3 align="center">Update Theater details</h3>
         <form onSubmit={this.onSubmit}>
           

@@ -26,8 +26,8 @@ const Record = (props) => (
       <a
         href="/topicview"
         
-        onClick={() => {
-          props.deleteRecord(props.record._id);
+        onClick={() => { 
+          props.deleteRecord(props.record._id); 
           alert("Registered Topic Successfully Deleted !!!");
          
         }}
@@ -90,11 +90,12 @@ export default class TopicList extends Component {
 
   render() {
     return (
-      <div>
+      <div class="card">
          <center> 
       <br></br>
         
        <div><h3>Student's Registered Topic List</h3></div> 
+       <br></br>
         <table className="table table-striped" style={{ marginTop: 10 }}>
           <thead>
             <tr>
@@ -107,7 +108,7 @@ export default class TopicList extends Component {
               <th>Academic_Year</th>
               <th>Semester</th>
               <th>Subject_Name</th>
-              <th>Reserach_Topic_Name</th>
+              <th>Topic_Name</th>
               <th>contact_Number</th>
               <th>Email</th>
               <th>Action</th>
