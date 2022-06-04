@@ -22,18 +22,18 @@ const Record = (props) => (
     <td>{props.record.email}</td>
 
     <td> 
-    <Link to="/rejectedtopic" >
+    <Link to ={"/rejectedtopic"}></Link>
       <a
-         href="/rejectedtopic"
-        
+       
+       href="/rejectedtopic"
         onClick={() => {
-          props.deleteRecord(props.record._id);
+          props.deleteRecord(props.record._id); 
           alert(" Topic Data Successfully Deleted !!!");
          
         }}
       >
         Delete
-      </a></Link>
+      </a> 
     </td>
     
    
@@ -109,7 +109,7 @@ export default class RejectedTopicsList extends Component {
               <th>Academic_Year</th>
               <th>Semester</th>
               <th>Subject_Name</th>
-              <th>Reserach_Topic_Name</th>
+              <th>Topic_Name</th>
               <th>contact_Number</th>
               <th>Email</th>
               <th>Action</th> 

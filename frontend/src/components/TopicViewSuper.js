@@ -80,7 +80,7 @@ export default class TopicList extends Component {
 
   render() {
     return (
-      <div>
+      <div class="card">
        <center> 
       <br></br> 
         

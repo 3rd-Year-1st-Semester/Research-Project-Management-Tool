@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 export default function TopicRegistration() {
+ 
 
     const [studentId, setStudentId] = useState("");
     const [fullName,setFullName] = useState("");
@@ -32,6 +33,8 @@ export default function TopicRegistration() {
         console.log(newTopicRegistration);
         axios.post("http://localhost:7000/TopicRegistration/register",newTopicRegistration).then(() => {
             alert("Topic Registered Successfully!!!");
+           
+
             
         }).catch((err) => {
             alert(err)
@@ -46,7 +49,7 @@ export default function TopicRegistration() {
 
 
     return (
-        <div>
+        <div class="card">
             <br/><br/>
             <div className="heading" >
                 <h1>Topic Registration</h1>
@@ -153,7 +156,7 @@ export default function TopicRegistration() {
 
                     </div>
 
-
+                                    
 
                     <button type="submit" class="btn btn-primary" >Submit</button>
                 </form>

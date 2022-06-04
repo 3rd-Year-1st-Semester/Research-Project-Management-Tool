@@ -2,12 +2,12 @@ const router= require("express").Router();
 let TopicApprove =require("../models/TopicApprove");
 
 router.route("/send").post((req,res)=>{
-    // const studentId= req.body.studentId;
-    // const fullName= req.body.fullName;
-    // const groupName= req.body.groupName;
-    // const faculty = req.body.faculty;
-    // const academicYear= req.body.academicYear;
-    // const semester = req.body.semester;
+    const studentId= req.body.studentId;
+    const fullName= req.body.fullName;
+    const groupName= req.body.groupName;
+    const faculty = req.body.faculty;
+    const academicYear= req.body.academicYear;
+    const semester = req.body.semester;
     const subjectName=req.body.subjectName;
     const researchName=req.body.researchName;
     const contact_number=Number(req.body.contact_number);
@@ -16,12 +16,12 @@ router.route("/send").post((req,res)=>{
   
    
     const newtopicApprove = new TopicApprove({
-        // studentId,
-        // fullName,
-        // groupName,
-        // faculty,
-        // academicYear,
-        // semester,
+        studentId,
+        fullName,
+        groupName,
+        faculty,
+        academicYear,
+        semester,
         subjectName,
         researchName,
         contact_number,

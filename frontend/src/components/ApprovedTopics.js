@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
- 
+import { Link } from "react-router-dom";
 
 
  
@@ -20,6 +20,22 @@ const Record = (props) => (
     <td>{props.record.researchName}</td>
     <td>{props.record.contact_number}</td>
     <td>{props.record.email}</td>
+
+ <td> 
+    <Link to ={"/approvedtopic"}></Link>
+      <a
+       href="/approvedtopic"
+        
+        onClick={() => {
+          props.deleteRecord(props.record._id); 
+          alert(" Topic Data Successfully Deleted !!!");
+         
+        }}
+      >
+        Delete
+      </a>
+    </td>
+    
     
    
   </tr>
@@ -49,7 +65,7 @@ export default class ApprovedTopicsList extends Component {
  
   
   deleteRecord(id) {
-    axios.delete("http://localhost:7000/TopicRegistration/delete/" + id).then((response) => {
+    axios.delete("http://localhost:7000/TopicApprove/delete/" + id).then((response) => {
       
       console.log(response.data);
    
@@ -77,11 +93,10 @@ export default class ApprovedTopicsList extends Component {
 
   render() {
     return (
-      <div>
-        
-        <center> 
+      <div class="card">
+      <center> 
       <br></br>
-       <div><h3>Approved Research Topics</h3></div> 
+       <div><h3>Approved Research Topics</h3></div>  
        <br></br>
         <table className="table table-striped" style={{ marginTop: 10 }}>
           <thead>
@@ -95,15 +110,15 @@ export default class ApprovedTopicsList extends Component {
               <th>Academic_Year</th>
               <th>Semester</th>
               <th>Subject_Name</th>
-              <th>Reserach_Topic_Name</th>
+              <th>Topic_Name</th>
               <th>contact_Number</th>
-              <th>Email</th> 
-              <th>Action</th>
+              <th>Email</th>
+              <th>Action</th> 
             </tr>
           </thead>
           <tbody>{this.recordList()}</tbody>
         </table>
-        </center> 
+        </center>
         <br/><br/>
       </div>
       

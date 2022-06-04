@@ -42,6 +42,7 @@ import TopicResultSend from './components/TopicResultSend';
 import ApprovedTopics from './components/ApprovedTopics';
 import RejectedTopics from './components/RejectedTopics';
 import TopicResultSend2 from './components/TopicResultSend2';
+import TopicStatus from './components/TopicStatus';
 
 
 export function App() {
@@ -83,7 +84,7 @@ export function App() {
                     <Route path="/students/submission" element={<StudentFileUpload />} />
                     <Route path="/admin/Submitfiles" element={<FileAdminView />} />
 
-                    <Route path='/a'   element={<TopicRegistration/>} > </Route>
+                    <Route path='/topicregister'   element={<TopicRegistration/>} > </Route>
                     <Route path='/topicview'   element={<TopicView/>} > </Route>
                     <Route path='/topicviewsuper'   element={<TopicViewSuper/>} > </Route>
                     <Route path='/updatetopic/:id'   element={<TopicUpdate/>} > </Route>
@@ -91,6 +92,7 @@ export function App() {
                     <Route path='/approvedtopic'   element={<ApprovedTopics/>} > </Route>
                     <Route path='/rejectedtopic'   element={<RejectedTopics/>} > </Route>
                     <Route path='/topicresult2/:id'   element={<TopicResultSend2/>} > </Route>
+                    <Route path='/topicstatus'   element={<TopicStatus/>} > </Route>
 
 
 
