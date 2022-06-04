@@ -10,7 +10,7 @@ export default function StudentMarking() {
     const [MarkingData, setMarkingData] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:7000/Markings/").then((res) => {
+        axios.get("https://research-tool-backend.herokuapp.com/Markings/").then((res) => {
             setMarkingData(res.data);
             console.log(res.data);
         }).catch((err) => {

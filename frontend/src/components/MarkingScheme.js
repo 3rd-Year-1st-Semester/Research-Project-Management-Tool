@@ -82,7 +82,7 @@ export default function MarkingScheme() {
     const insertData = (e) => {
         e.preventDefault();
 
-        axios.post("http://localhost:7000/Markings/add", markingData).then((res) => {
+        axios.post("https://research-tool-backend.herokuapp.com/Markings/add", markingData).then((res) => {
 
             swal({
 

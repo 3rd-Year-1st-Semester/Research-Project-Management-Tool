@@ -30,7 +30,7 @@ export default function UpdateMarkingScheme() {
     //get data using id
     useEffect(() => {
 
-        axios.get(`http://localhost:7000/Markings/${id}`).then((res) => {
+        axios.get(`https://research-tool-backend.herokuapp.com/Markings/${id}`).then((res) => {
             console.log(res.data);
             setData(res.data);
         }).catch((err) => {
