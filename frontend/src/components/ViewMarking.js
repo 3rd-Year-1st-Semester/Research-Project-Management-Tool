@@ -38,18 +38,19 @@ const [searchTerm, setSearchTerm] = useState("");
 
     return (
 <div>
-        <div className="col-lg-3 container  mt-5 ">
+       
+               
+            <div class="hm-gradient">
+                <div class="container mt-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                        <div className="col-lg-3  mt-5 ">
                         <input type="search" placeholder="search " name="search" className="form-control" style={{ fontSize: "20px" }}
                             onChange={(e) => {
                                 setSearchTerm(e.target.value)
                             }} />
                     </div>
         <div>
-               
-            <div class="hm-gradient">
-                <div class="container mt-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
                         {
                                 MarkingData.filter(val => {
                                     if (searchTerm === "") {
