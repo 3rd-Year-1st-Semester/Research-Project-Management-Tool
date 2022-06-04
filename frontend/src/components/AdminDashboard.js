@@ -9,9 +9,9 @@ function AdminDashboard() {
             <div class="row mt-5">
                 <div class="col-lg-3 col-md-6">
 
-                    <button style={{ width: '150px', height: '150px' }} className="btn btn-dark text-light font-weight-bold border">
-                        <img src="https://img.icons8.com/color/48/undefined/topic--v1.png" /><br />
-                        Topic Register
+                    <button onClick={()=>window.location = "/topicview"}style={{ width: '150px', height: '150px' }} className="btn btn-dark text-light font-weight-bold border">
+                    <img src="https://img.icons8.com/color/48/undefined/request-service.png"/><br />
+                        Topic Management
                     </button>
 
                 </div>
@@ -47,7 +47,7 @@ function AdminDashboard() {
             <div class="row mt-5">
                 <div class="col-lg-3 col-md-6 mb-5">
 
-                    <button style={{ width: '150px', height: '150px' }} className="btn btn-dark text-light font-weight-bold border">
+                    <button onClick={()=>window.location = "/topicstatus"}style={{ width: '150px', height: '150px' }} className="btn btn-dark text-light font-weight-bold border">
                         <img src="https://img.icons8.com/color/48/undefined/check-file.png" /><br />
                         Topic Status
                     </button>

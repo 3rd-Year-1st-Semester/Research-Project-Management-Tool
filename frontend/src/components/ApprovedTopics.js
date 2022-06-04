@@ -94,10 +94,13 @@ export default class ApprovedTopicsList extends Component {
   render() {
     return (
       <div class="card">
-      <center> 
+       
       <br></br>
-       <div><h3>Approved Research Topics</h3></div>  
+       <div><div> <h1 class="display-4">Approved Reserach Topics</h1>
+                    <p class="lead">Students can continue Reserach on those Topics</p>
+           </div></div>  
        <br></br>
+       <center>
         <table className="table table-striped" style={{ marginTop: 10 }}>
           <thead>
             <tr>

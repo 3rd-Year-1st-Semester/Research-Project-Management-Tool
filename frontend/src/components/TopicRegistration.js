@@ -52,7 +52,9 @@ export default function TopicRegistration() {
         <div class="card">
             <br/><br/>
             <div className="heading" >
-                <h1>Topic Registration</h1>
+                
+                <h1 class="display-4">Topic Registration</h1>
+                    <p class="lead">Fill the Form and Submit Reserach Topic</p>
             </div>
             <br></br>
              

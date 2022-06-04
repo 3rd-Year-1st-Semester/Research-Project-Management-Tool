@@ -81,13 +81,17 @@ export default class TopicList extends Component {
   render() {
     return (
       <div class="card">
-       <center> 
+        
       <br></br> 
         
-       <div><h3>Student's  Registered Topic List</h3>
+       <div> 
+       
+       <h1 class="display-4">Supervising Reserach Topic List</h1>
+                    <p class="lead">Supervisor Supervising the Topic Details</p>
            
             <br></br> 
        </div> 
+       <center>
         <table className="table table-striped" style={{ marginTop: 10 }}>
           <thead>
             <tr>

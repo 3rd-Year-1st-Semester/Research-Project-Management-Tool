@@ -175,7 +175,7 @@ export const withRouter = (WrappedComponent) => (props) => {
 
 <br/><br/><br/><br/><br/>
 <div class="card">
-        <h3 align="center">Topic Registration Details</h3>
+        <h3 align="center">Rejecting Topic Registration Details</h3>
         <form onSubmit={this.onSubmit}>
 
         <div className="form-group">

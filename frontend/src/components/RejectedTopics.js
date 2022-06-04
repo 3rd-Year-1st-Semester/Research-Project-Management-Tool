@@ -92,11 +92,14 @@ export default class RejectedTopicsList extends Component {
 
   render() {
     return (
-      <div>
-      <center> 
+      <div class="card">
+      
       <br></br>
-       <div><h3>Rejected Research Topics</h3></div>  
+       <div> <h1 class="display-4">Rejected Reserach Topics</h1>
+                    <p class="lead">Students have to change and Resubmit a New Reserach Topic</p>
+           </div>  
        <br></br>
+       <center> 
         <table className="table table-striped" style={{ marginTop: 10 }}>
           <thead>
             <tr>
