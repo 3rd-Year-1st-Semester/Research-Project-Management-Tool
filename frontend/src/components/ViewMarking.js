@@ -8,7 +8,7 @@ export default function ViewMarking() {
     const [MarkingData, setMarkingData] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:7000/Markings/").then((res) => {
+        axios.get("https://research-tool-backend.herokuapp.com/Markings/").then((res) => {
             setMarkingData(res.data);
             console.log(res.data);
         }).catch((err) => {
@@ -18,7 +18,7 @@ export default function ViewMarking() {
     
 
 const deleteMethod = (id) => {
-        axios.delete(`http://localhost:7000/Markings/delete/${id}`)
+        axios.delete(`https://research-tool-backend.herokuapp.com/Markings/delete/${id}`)
             .then(() => {
                 swal({
 
