@@ -32,9 +32,10 @@ function StudentDashboard() {
                 </div>
                 <div class="col-lg-3 col-md-6">
 
-                    <button style={{ width: '150px', height: '150px' }} className="btn btn-dark text-light font-weight-bold">
+                    <button onClick={()=>window.location = "/students/submission"} style={{ width: '150px', height: '150px' }} className="btn btn-dark text-light font-weight-bold">
                         <img src="https://img.icons8.com/color/48/undefined/upload-2--v1.png" /><br />
-                        Uploads
+                         
+                        Submission
                     </button>
 
                 </div>
@@ -59,9 +60,9 @@ function StudentDashboard() {
                 </div>
                 <div class="col-lg-3 col-md-6">
 
-                    <button style={{ width: '150px', height: '150px' }} className="btn btn-dark text-light font-weight-bold">
-                        <img src="https://img.icons8.com/color/48/undefined/add-user-group-man-man-skin-type-7.png" /><br />
-                        Group Register
+                    <button  onClick={()=>window.location = "/students/filesdownload"}style={{ width: '150px', height: '150px' }} className="btn btn-dark text-light font-weight-bold">
+                        <img src="https://img.icons8.com/color/48/undefined/download--v1.png" /><br />
+                        Downloads
                     </button>
 
                 </div>
